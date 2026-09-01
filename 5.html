@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<!-- <meta
+			name="viewport"
+			content="width=1920, height=1080, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>-->
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Impress Magazine - Summer, 2026</title>
+		<link rel="stylesheet" href="/assets/css/styles.css" />
+		<link rel="icon" type="image/x-icon" href="/assets/nav-images/logo.png" />
+		<link id="favicon" rel="shortcut icon" href="/assets/nav-images/logo.png" />
+
+		<link href="/assets/css/styles-slideshow.css" rel="stylesheet" />
+
+		<link href="/assets/css/styles-tooltip.css" rel="stylesheet" />
+		<link href="/assets/css/styles-modal.css" rel="stylesheet" />
+		<link href="/assets/css/styles-modal-split.css" rel="stylesheet" />
+		<link href="/assets/css/styles-audio-player.css" rel="stylesheet" />
+
+		<script type="text/javascript" src="/assets/scripts/scripts.js"></script>
+
+		<script>
+			(function () {
+				try {
+					const savedTheme = localStorage.getItem("theme");
+					const prefersDark = window.matchMedia(
+						"(prefers-color-scheme: dark)",
+					).matches;
+					if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+						document.documentElement.classList.add("dark");
+					} else if (savedTheme === "light") {
+						document.documentElement.classList.remove("dark");
+					} else {
+						// Default to dark if nothing set and system isn't dark
+						document.documentElement.classList.add("dark");
+					}
+				} catch (e) {
+					console.error("Error applying initial theme class:", e);
+				}
+			})();
+		</script>
+	</head>
+	<body>
+		<nav id="icon-nav">
+			<a
+				href="https://impress.isesaki.in"
+				aria-label="Impress Magazine Gallery"
+				class="slide-nav-trigger"
+				data-target-slide="slide-alpha"
+				>&#128213;</a
+			>
+			<a
+				href="index.html"
+				aria-label="Front Cover"
+				class="slide-nav-trigger"
+				data-target-slide="slide-beta"
+				>&#x23EA;</a
+			>
+			<a href="1.html" aria-label="1">&#x0031;</a>
+			<a href="1.html" aria-label="2">&#x0032;</a>
+			<a href="3.html" aria-label="3">&#x0033;</a>
+			<a href="3.html" aria-label="4">&#x0034;</a>
+			<a href="5.html" aria-label="5">&#x0035;</a>
+			<a href="5.html" aria-label="6">&#x0036;</a>
+			<a href="cover.html" aria-label="Back Cover">&#x23E9;</a>
+			<a href="about.html" aria-label="About">&#128209;</a>
+			<button id="theme-toggle" aria-label="Switch theme"></button>
+
+			<button id="snow-toggle" aria-label="Toggle Snowflakes">&#x2744;</button>
+		</nav>
+
+		<main id="hero">
+			<div id="container">
+				<!-- Your website content goes here -->
+
+				<div class="item sidebar sidebar-left"></div>
+
+				<div class="item gap-left"></div>
+
+				<div
+					class="item content-center"
+					id="page-content"
+					style="
+						background-image: url(&quot;/assets/Web/page056.webp&quot;);
+						background-size: contain;
+						background-position: center;
+						background-repeat: no-repeat;
+					"
+					data-page-number="5"
+					data-prev-page="3.html"
+					data-next-page="cover.html"
+					data-landscape-bg="/assets/Web/page056.webp"
+					data-portrait-left="/assets/Web/page05.webp"
+					data-portrait-right="/assets/Web/page06.webp"
+				>
+					<div class="left-content">
+						<!-- Audio -->
+
+						<audio id="audio1-1" class="playondemand">
+							<!-- empty audio, just used to open the modal -->
+							<source src="./assets/audio/audio5-1.mp3" type="audio/mp3" />
+						</audio>
+						<audio id="audio1-2" class="playondemand">
+							<!-- empty audio, just used to open the modal -->
+							<source src="./assets/audio/audio5-1.mp3" type="audio/mp3" />
+						</audio>
+					</div>
+				</div>
+
+				<div class="item gap-right"></div>
+				<div class="item sidebar sidebar-right">
+					<!-- Buttons for Intro Text -->
+
+					<form
+						action="/apps/Crossword/index.html"
+						method="get"
+						target="_blank"
+					>
+						<button
+							class="center-items right-nav-buttons clickable"
+							type="submit"
+						>
+							<img
+								id="play1-3"
+								class="audio-button-image clickable"
+								src="/assets/nav-images/link.png"
+							/>
+							<h6 style="margin: auto">Crossword</h6>
+						</button>
+					</form>
+					<button
+						class="center-items right-nav-buttons clickable"
+						type="button"
+						onClick="PlayAndShowWithNav('audio1-1', 'text1-1', 'play1-1', 'prev-portrait', 'next-portrait')"
+					>
+						<img
+							id="play1-1"
+							class="audio-button-image clickable"
+							src="/assets/nav-images/play-g79150a13d_1280.png"
+						/>
+						<h6 style="margin: auto">Article</h6>
+					</button>
+				</div>
+			</div>
+
+			<div class="items hidden-text" id="text1-1">
+				<!-- Modal content -->
+				<div class="modal-content-slideshow">
+					<div class="modal-header">
+						<span
+							class="close clickable"
+							onClick="ResetPlayAndShowWithNav('audio1-1', 'text1-1', 'play1-1','prev-portrait', 'next-portrait')"
+							>&times;</span
+						>
+					</div>
+
+					<div class="modal-body" style="display: flex">
+						<!-- Add the image slideshow here -->
+						<div id="slideshow-container2" class="slideshow-container">
+							<!-- Slides -- Change for SlideShow1 or 2 -->
+							<div class="mySlides1">
+								<div class="slide-content">
+									<div class="image-panel">
+										<img
+											src="/assets/Web/5 - Migrations/jan-niclas-aberle-h5ZqVoCDgys-unsplash.jpg"
+											class="slide-image"
+											alt="Migrating Geese"
+										/>
+									</div>
+									<div class="caption-container" style="vertical-align: middle">
+										<br /><br />
+										<p
+											style="
+												font-size: 1.6rem;
+												line-height: 1.5;
+												text-align: center;
+												vertical-align: middle;
+											"
+										>
+											Before you read, let's learn these words: <br />
+										</p>
+										<ul
+											style="
+												font-size: 1.15rem;
+												line-height: 1.3;
+												text-align: left;
+												padding-left: 5%;
+											"
+										>
+											<li>sale - セール</li>
+											<li>in search of ~ - ～を探しに</li>
+											<li>tiny - とても小さい</li>
+											<li>~est - 最も(一番)～な</li>
+											<li>insect - 昆虫</li>
+											<li>beast - けもの・動物</li>
+											<li>migration - 動物の大移動</li>
+											<li>take a look - 見てみよう</li>
+											<li>journey - 長い旅</li>
+											<li>northern - 北の</li>
+											<li>… and back - (行って) 戻って</li>
+											<li>whole - 全部の</li>
+											<li>generation - 世代</li>
+											<li>… wide - 幅～の</li>
+											<li>brain - 脳</li>
+											<li>where to ~ - ～する場所・ どこに～するか</li>
+											<li>even - ～でさえ</li>
+											<li>North Pole - 北極</li>
+											<li>migrate - 渡る・移動する</li>
+											<li>gazelle - ガゼル</li>
+											<li>place - 場所</li>
+											<li>be born - 生まれる</li>
+										</ul>
+
+										<div class="numbertext">1 / 7</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="mySlides1">
+								<div class="slide-content">
+									<div class="image-panel">
+										<img
+											src="/assets/Web/5 - Migrations/jan-niclas-aberle-h5ZqVoCDgys-unsplash.jpg"
+											class="slide-image"
+											alt="Migrating Geese"
+										/>
+									</div>
+									<div class="caption-container">
+										<audio
+											controls
+											style="
+												width: 400px;
+												height: 40px;
+												border-radius: 8px;
+												padding: 5px;
+												position: relative;
+												left: 0px;
+											"
+										>
+											<source
+												src="assets/audio/audio5-1b.mp3"
+												type="audio/mpeg"
+											/>
+											Your browser does not support the audio element.</audio
+										><br /><br />
+										<h2>Amazing Migrations</h2>
+										<br />
+										<p
+											style="
+												font-size: 1.7rem;
+												text-indent: 1rem;
+												line-height: 1.7;
+												margin-top: 0.5rem;
+												padding: 0rem;
+												text-align: justify;
+											"
+										>
+											In Japan, Summer is when people start having “New Life”
+											<span class="tooltip"
+												><b>sales</b
+												><span class="tooltiptext">セール</span></span
+											>. We buy new bicycles, clothes, and goods. We go to new
+											schools or new jobs, and we move to new houses and homes.
+											A lot of animals also move to new homes
+											<span class="tooltip"
+												><b>in search of</b
+												><span class="tooltiptext">～を探しに</span></span
+											>
+											food. From the
+											<span class="tooltip"
+												><b>tiniest</b
+												><span class="tooltiptext">とても小さい</span></span
+											>
+											<span class="tooltip"
+												><b>insects</b
+												><span class="tooltiptext">昆虫</span></span
+											>
+											to the largest
+											<span class="tooltip"
+												><b>beasts</b
+												><span class="tooltiptext">けもの・動物</span></span
+											>, the world is full of amazing
+											<span class="tooltip"
+												><b>migrations</b
+												><span class="tooltiptext">動物の大移動</span></span
+											>.
+											<span class="tooltip"
+												><b>Let’s take a look</b
+												><span class="tooltiptext">見てみよう</span></span
+											>
+											at some of them.
+										</p>
+
+										<div class="numbertext">2 / 7</div>
+									</div>
+								</div>
+							</div>
+							<div class="mySlides1">
+								<div class="slide-content">
+									<div class="image-panel">
+										<img
+											src="/assets/Web/5 - Migrations/suzanne-d-williams-mC2mAodvrws-unsplash.jpg"
+											class="slide-image"
+											alt="Butterfly"
+										/>
+									</div>
+									<div class="caption-container">
+										<audio
+											controls
+											style="
+												width: 400px;
+												height: 40px;
+												border-radius: 8px;
+												padding: 5px;
+												position: relative;
+												left: 0px;
+											"
+										>
+											<source
+												src="assets/audio/audio5-1c.mp3"
+												type="audio/mpeg"
+											/>
+											Your browser does not support the audio element.</audio
+										><br /><br />
+										<h3>The Butterfly</h3>
+										<p
+											style="
+												font-size: 1.7rem;
+												text-indent: 1rem;
+												line-height: 1.7;
+												margin-top: 0.5rem;
+												padding: 0rem;
+												text-align: justify;
+											"
+										>
+											It doesn’t look very strong, but the butterfly is a world
+											traveler. Actually, the monarch butterfly (オオカバマダラ)
+											makes one of the most amazing
+											<span class="tooltip"
+												><b>journeys</b
+												><span class="tooltiptext">長い旅</span></span
+											>
+											in the animal world. It flies in the winter from the
+											<span class="tooltip"
+												><b>northern</b
+												><span class="tooltiptext">北の</span></span
+											>
+											United States and Canada to Mexico
+											<span class="tooltip"
+												><b>and back</b
+												><span class="tooltiptext">(行って) 戻って</span></span
+											>
+											in the summer. But one butterfly cannot finish the
+											<span class="tooltip"
+												><b>whole</b
+												><span class="tooltiptext">全部の</span></span
+											>
+											trip. From Mexico, its children and their children fly
+											slowly back north. In total, it takes five
+											<span class="tooltip"
+												><b>generations</b
+												><span class="tooltiptext">世代</span></span
+											>
+											for its yearly trip.
+										</p>
+
+										<div class="numbertext">3 / 7</div>
+									</div>
+								</div>
+							</div>
+							<div class="mySlides1">
+								<div class="slide-content">
+									<div class="image-panel">
+										<img
+											src="/assets/Web/5 - Migrations/erin-minuskin-LGaneK6yG9M-unsplash.jpg"
+											class="slide-image"
+											alt="Butterfly"
+										/>
+									</div>
+									<div class="caption-container">
+										<audio
+											controls
+											style="
+												width: 400px;
+												height: 40px;
+												border-radius: 8px;
+												padding: 5px;
+												position: relative;
+												left: 0px;
+											"
+										>
+											<source
+												src="assets/audio/audio5-1d.mp3"
+												type="audio/mpeg"
+											/>
+											Your browser does not support the audio element.</audio
+										><br /><br />
+										<h3>The Butterfly</h3>
+										<p
+											style="
+												font-size: 1.7rem;
+												text-indent: 1rem;
+												line-height: 1.7;
+												margin-top: 0.5rem;
+												padding: 0rem;
+												text-align: justify;
+											"
+										>
+											This butterfly is only about 10 cm
+											<span class="tooltip"
+												><b>wide</b
+												><span class="tooltiptext">幅～の</span></span
+											>, but its yearly journey is about 10,000 km. Its
+											<span class="tooltip"
+												><b>brain</b><span class="tooltiptext">脳</span></span
+											>
+											is only about 1 mm³, yet it still knows
+											<span class="tooltip"
+												><b>where to</b
+												><span class="tooltiptext"
+													>～する場所・ どこに～するか</span
+												></span
+											>
+											go. And it’s not
+											<span class="tooltip"
+												><b>even</b
+												><span class="tooltiptext">～でさえ</span></span
+											>
+											the most amazing. The painted lady butterfly
+											(ヒメアカタテハ) travels 14,000 km between Europe and
+											Africa over six generations. Butterflies are tiny and
+											weak. But remember this: even tiny animals do amazing
+											things.
+										</p>
+
+										<div class="numbertext">4 / 7</div>
+									</div>
+								</div>
+							</div>
+							<div class="mySlides1">
+								<div class="slide-content">
+									<div class="image-panel">
+										<img
+											src="/assets/Web/5 - Migrations/christoph-nolte-i40nHf7CT9M-unsplash.jpg"
+											class="slide-image"
+											alt="The Arctic Tern"
+										/>
+									</div>
+									<div class="caption-container">
+										<audio
+											controls
+											style="
+												width: 400px;
+												height: 40px;
+												border-radius: 8px;
+												padding: 5px;
+												position: relative;
+												left: 0px;
+											"
+										>
+											<source
+												src="assets/audio/audio5-1e.mp3"
+												type="audio/mpeg"
+											/>
+											Your browser does not support the audio element.</audio
+										><br /><br />
+										<h3>The Tern</h3>
+										<p
+											style="
+												font-size: 1.7rem;
+												text-indent: 1rem;
+												line-height: 1.7;
+												margin-top: 0.5rem;
+												padding: 0rem;
+												text-align: justify;
+											"
+										>
+											The Arctic tern is the size of a banana, at only 100
+											grams, but it flies from the
+											<span class="tooltip"
+												><b>North Pole</b
+												><span class="tooltiptext">北極</span></span
+											>
+											all the way to the South Pole and back again. That’s over
+											40,000 km each year! Some terns even fly over 90,000 km as
+											they
+											<span class="tooltip"
+												><b>migrate</b
+												><span class="tooltiptext">渡る・移動する</span></span
+											>. That’s the same as going around the Earth twice!
+										</p>
+
+										<div class="numbertext">5 / 7</div>
+									</div>
+								</div>
+							</div>
+							<div class="mySlides1">
+								<div class="slide-content">
+									<div class="image-panel">
+										<img
+											src="/assets/Web/5 - Migrations/jorge-tung-1pZJqQlgpsY-unsplash.jpg"
+											class="slide-image"
+											alt="The Wildebeest"
+										/>
+									</div>
+									<div class="caption-container">
+										<audio
+											controls
+											style="
+												width: 400px;
+												height: 40px;
+												border-radius: 8px;
+												padding: 5px;
+												position: relative;
+												left: 0px;
+											"
+										>
+											<source
+												src="assets/audio/audio5-1f.mp3"
+												type="audio/mpeg"
+											/>
+											Your browser does not support the audio element.</audio
+										><br /><br />
+										<h3>The Wildebeest</h3>
+										<p
+											style="
+												font-size: 1.7rem;
+												text-indent: 1rem;
+												line-height: 1.7;
+												margin-top: 0.5rem;
+												padding: 0rem;
+												text-align: justify;
+											"
+										>
+											The African wildebeest doesn’t make the longest journey.
+											They only travel around 500 to 2,000 km from Tanzania to
+											Kenya. But the number of wildebeest is amazing! More than
+											a million (1,000,000) wildebeest make this trip together.
+											And they’re joined with their zebra,
+											<span class="tooltip"
+												><b>gazelle</b
+												><span class="tooltiptext">ガゼル</span></span
+											>, and other animal friends. It’s the largest migration in
+											the world!
+										</p>
+
+										<div class="numbertext">6 / 7</div>
+									</div>
+								</div>
+							</div>
+							<div class="mySlides1">
+								<div class="slide-content">
+									<div class="image-panel">
+										<img
+											src="/assets/Web/5 - Migrations/54282152867_f4d6a9cb6a_k.jpg"
+											class="slide-image"
+											alt="The Salmon"
+										/>
+									</div>
+									<div class="caption-container">
+										<audio
+											controls
+											style="
+												width: 400px;
+												height: 40px;
+												border-radius: 8px;
+												padding: 5px;
+												position: relative;
+												left: 0px;
+											"
+										>
+											<source
+												src="assets/audio/audio5-1g.mp3"
+												type="audio/mpeg"
+											/>
+											Your browser does not support the audio element.</audio
+										><br /><br />
+										<h3>The Salmon</h3>
+										<p
+											style="
+												font-size: 1.7rem;
+												text-indent: 1rem;
+												line-height: 1.9;
+												margin-top: 0.5rem;
+												padding: 0rem;
+												text-align: justify;
+											"
+										>
+											Salmon are delicious but they’re also amazing swimmers!
+											When they’re young, they swim from rivers out to the sea,
+											and when they’re older, they swim back up the rivers. King
+											salmon (chinook salmon) can swim over 3,200 km up rivers
+											in Alaska and Canada back to the
+											<span class="tooltip"
+												><b>places</b
+												><span class="tooltiptext">場所</span></span
+											>
+											they
+											<span class="tooltip"
+												><b>were born</b
+												><span class="tooltiptext">生まれる</span></span
+											>. They can even jump up waterfalls that are 3.7 m high!
+										</p>
+
+										<div class="numbertext">7 / 7</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Navigation buttons -- Change for SlideShow1 or 2 -->
+							<a class="prev" onclick="plusSlides(1, -1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+
+							<br />
+						</div>
+					</div>
+
+					<!-- Modal footer -->
+					<div class="modal-footer">
+						<!-- Thumbnails -- Change for SlideShow1 or 2 -->
+						<div class="thumbnail-container">
+							<img
+								src="/assets/Web/5 - Migrations/jan-niclas-aberle-h5ZqVoCDgys-unsplash.jpg"
+								class="thumbnail1 thumbnail"
+								alt="Migrating Geese"
+								onclick="currentSlide(1, 1)"
+							/>
+							<img
+								src="/assets/Web/5 - Migrations/jan-niclas-aberle-h5ZqVoCDgys-unsplash.jpg"
+								class="thumbnail1 thumbnail"
+								alt="Migrating Geese"
+								onclick="currentSlide(1, 2)"
+							/>
+							<img
+								src="/assets/Web/5 - Migrations/suzanne-d-williams-mC2mAodvrws-unsplash.jpg"
+								class="thumbnail1 thumbnail"
+								alt="Butterfly"
+								onclick="currentSlide(1, 3)"
+							/>
+							<img
+								src="/assets/Web/5 - Migrations/erin-minuskin-LGaneK6yG9M-unsplash.jpg"
+								class="thumbnail1 thumbnail"
+								alt="Butterfly"
+								onclick="currentSlide(1, 4)"
+							/>
+							<img
+								src="/assets/Web/5 - Migrations/christoph-nolte-i40nHf7CT9M-unsplash.jpg"
+								class="thumbnail1 thumbnail"
+								alt="The Arctic Tern"
+								onclick="currentSlide(1, 5)"
+							/>
+							<img
+								src="/assets/Web/5 - Migrations/jorge-tung-1pZJqQlgpsY-unsplash.jpg"
+								class="thumbnail1 thumbnail"
+								alt="The Wildebeest"
+								onclick="currentSlide(1, 6)"
+							/>
+							<img
+								src="/assets/Web/5 - Migrations/54282152867_f4d6a9cb6a_k.jpg"
+								class="thumbnail1 thumbnail"
+								alt="The Salmon"
+								onclick="currentSlide(1, 7)"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<button id="prev-portrait" aria-label="Previous Slide">&lt;</button>
+			<button id="next-portrait" aria-label="Next Slide">&gt;</button>
+		</main>
+
+		<canvas id="snowfall"></canvas>
+
+		<script src="/assets/scripts/scripts-snow.js" defer></script>
+		<script src="/assets/scripts/scripts-magazine-nav.js" defer></script>
+		<script
+			type="text/javascript"
+			src="/assets/scripts/scripts-slideshow.js"
+		></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"></script>
+		<script
+			type="text/javascript"
+			src="/assets/scripts/scripts-audio-player.js"
+		></script>
+	</body>
+</html>

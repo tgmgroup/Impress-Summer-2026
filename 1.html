@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<!-- <meta
+			name="viewport"
+			content="width=1920, height=1080, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>-->
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Impress Magazine - Summer, 2026</title>
+		<link rel="stylesheet" href="/assets/css/styles.css" />
+		<link rel="icon" type="image/x-icon" href="/assets/nav-images/logo.png" />
+		<link id="favicon" rel="shortcut icon" href="/assets/nav-images/logo.png" />
+
+		<link href="/assets/css/styles-slideshow.css" rel="stylesheet" />
+
+		<link href="/assets/css/styles-tooltip.css" rel="stylesheet" />
+		<link href="/assets/css/styles-modal.css" rel="stylesheet" />
+		<link href="/assets/css/styles-modal-split.css" rel="stylesheet" />
+		<link href="/assets/css/styles-audio-player.css" rel="stylesheet" />
+
+		<script type="text/javascript" src="/assets/scripts/scripts.js"></script>
+
+		<script>
+			(function () {
+				try {
+					const savedTheme = localStorage.getItem("theme");
+					const prefersDark = window.matchMedia(
+						"(prefers-color-scheme: dark)",
+					).matches;
+					if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+						document.documentElement.classList.add("dark");
+					} else if (savedTheme === "light") {
+						document.documentElement.classList.remove("dark");
+					} else {
+						// Default to dark if nothing set and system isn't dark
+						document.documentElement.classList.add("dark");
+					}
+				} catch (e) {
+					console.error("Error applying initial theme class:", e);
+				}
+			})();
+		</script>
+	</head>
+	<body>
+		<nav id="icon-nav">
+			<a
+				href="https://impress.isesaki.in"
+				aria-label="Impress Magazine Gallery"
+				class="slide-nav-trigger"
+				data-target-slide="slide-alpha"
+				>&#128213;</a
+			>
+			<a
+				href="index.html"
+				aria-label="Front Cover"
+				class="slide-nav-trigger"
+				data-target-slide="slide-beta"
+				>&#x23EA;</a
+			>
+			<a href="1.html" aria-label="1">&#x0031;</a>
+			<a href="1.html" aria-label="2">&#x0032;</a>
+			<a href="3.html" aria-label="3">&#x0033;</a>
+			<a href="3.html" aria-label="4">&#x0034;</a>
+			<a href="5.html" aria-label="5">&#x0035;</a>
+			<a href="5.html" aria-label="6">&#x0036;</a>
+			<a href="cover.html" aria-label="Back Cover">&#x23E9;</a>
+			<a href="about.html" aria-label="About">&#128209;</a>
+			<button id="theme-toggle" aria-label="Switch theme"></button>
+
+			<button id="snow-toggle" aria-label="Toggle Snowflakes">&#x2744;</button>
+		</nav>
+
+		<main id="hero">
+			<div id="container">
+				<!-- Your website content goes here -->
+
+				<div class="item sidebar sidebar-left"></div>
+
+				<div class="item gap-left"></div>
+
+				<div
+					class="item content-center"
+					id="page-content"
+					style="
+						background-image: url(&quot;/assets/Web/page012.webp&quot;);
+						background-size: contain;
+						background-position: center;
+						background-repeat: no-repeat;
+					"
+					data-page-number="1"
+					data-prev-page="index.html"
+					data-next-page="3.html"
+					data-landscape-bg="/assets/Web/page012.webp"
+					data-portrait-left="/assets/Web/page01.webp"
+					data-portrait-right="/assets/Web/page02.webp"
+				>
+					<div class="left-content">
+						<!-- Audio -->
+
+						<audio id="audio1-1" class="playondemand">
+							<!-- empty audio, just used to open the modal -->
+							<source src="./assets/audio/audio1-0.mp3" type="audio/mp3" />
+						</audio>
+
+						<audio
+							id="audio1-1a"
+							class="playondemand"
+							controls
+							style="display: none"
+						>
+							<source src="./assets/audio/audio1-2a.mp3" type="audio/mpeg" />
+							Your browser does not support the audio element.
+						</audio>
+						<audio
+							id="audio1-1b"
+							class="playondemand"
+							controls
+							style="display: none"
+						>
+							<source src="./assets/audio/audio1-2b.mp3" type="audio/mpeg" />
+							Your browser does not support the audio element.
+						</audio>
+						<audio
+							id="audio1-1c"
+							class="playondemand"
+							controls
+							style="display: none"
+						>
+							<source src="./assets/audio/audio1-2c.mp3" type="audio/mpeg" />
+							Your browser does not support the audio element.
+						</audio>
+						<audio
+							id="audio1-1d"
+							class="playondemand"
+							controls
+							style="display: none"
+						>
+							<source src="./assets/audio/audio1-2d.mp3" type="audio/mpeg" />
+							Your browser does not support the audio element.
+						</audio>
+						<audio
+							id="audio1-1e"
+							class="playondemand"
+							controls
+							style="display: none"
+						>
+							<source src="./assets/audio/audio1-2e.mp3" type="audio/mpeg" />
+							Your browser does not support the audio element.
+						</audio>
+						<audio
+							id="audio1-1f"
+							class="playondemand"
+							controls
+							style="display: none"
+						>
+							<source src="./assets/audio/audio1-2f.mp3" type="audio/mpeg" />
+							Your browser does not support the audio element.
+						</audio>
+
+						<audio id="audio1-2" class="playondemand">
+							<!-- empty audio, just used to open the modal -->
+							<source src="./assets/audio/audio3-2.mp3" type="audio/mp3" />
+						</audio>
+					</div>
+				</div>
+
+				<div class="item gap-right"></div>
+				<div class="item sidebar sidebar-right">
+					<!-- Buttons for Intro Text -->
+
+					<form>
+						<button
+							class="center-items right-nav-buttons clickable"
+							type="submit"
+							formaction="https://drive.google.com/file/d/14YavaVQGTKlCPzRYWw4wIebAPst_BYeU/view"
+							formtarget="_blank"
+						>
+							<img
+								id="play1-1"
+								class="audio-button-image clickable"
+								src="/assets/nav-images/link.png"
+							/>
+							<h6 style="margin: auto">Summer Puzzles</h6>
+						</button>
+					</form>
+
+					<form>
+						<button
+							class="center-items right-nav-buttons clickable"
+							type="submit"
+							formaction="https://drive.google.com/file/d/170K1s88-QKHKojToimgY_Z_qH8kN_Uie/view"
+							formtarget="_blank"
+						>
+							<img
+								id="play1-2"
+								class="audio-button-image clickable"
+								src="/assets/nav-images/link.png"
+							/>
+							<h6 style="margin: auto">Summer Puzzle Solutions</h6>
+						</button>
+					</form>
+
+					<form>
+						<button
+							class="center-items right-nav-buttons clickable"
+							type="submit"
+							formaction="https://drive.google.com/file/d/1PesxiVL6PYVWTBzOllQsUp87krL7gK2A/view"
+							formtarget="_blank"
+						>
+							<img
+								id="play1-6"
+								class="audio-button-image clickable"
+								src="/assets/nav-images/link.png"
+							/>
+							<h6 style="margin: auto">Rebus Puzzles</h6>
+						</button>
+					</form>
+
+					<form>
+						<button
+							class="center-items right-nav-buttons clickable"
+							type="submit"
+							formaction="https://drive.google.com/file/d/1HvnpJs2PednL_yNzq_ktOxvoF8vtEaWn/view"
+							formtarget="_blank"
+						>
+							<img
+								id="play1-6"
+								class="audio-button-image clickable"
+								src="/assets/nav-images/link.png"
+							/>
+							<h6 style="margin: auto">Rebus Solutions</h6>
+						</button>
+					</form>
+
+					<button
+						class="center-items right-nav-buttons clickable"
+						type="button"
+						onClick="PlayAndShowWithNav('audio1-1', 'text1-1', 'play1-1', 'prev-portrait', 'next-portrait')"
+					>
+						<img
+							id="play1-1"
+							class="audio-button-image clickable"
+							src="/assets/nav-images/play-g79150a13d_1280.png"
+						/>
+						<h6 style="margin: auto">Laughing with Limericks</h6>
+					</button>
+				</div>
+			</div>
+
+			<div class="items hidden-text" id="text1-1">
+				<!-- Modal content -->
+				<div class="modal-content-slideshow">
+					<div class="modal-header">
+						<span
+							class="close clickable"
+							onClick="ResetPlayAndShowWithNav('audio1-1', 'text1-1', 'play1-1','prev-portrait', 'next-portrait')"
+							>&times;</span
+						>
+					</div>
+
+					<div class="modal-body">
+						<!-- Add the image slideshow here -->
+						<div id="slideshow-container2" class="slideshow-container">
+							<!-- Slides -- Change for SlideShow1 or 2 -->
+							<div class="mySlides1">
+								<div class="slide-content">
+									<img
+										src="/assets/Web/2-Countries/nick-fewings-BAZejJdZ57w-unsplash.jpg"
+										class="slide-image"
+										style="height: 90vh; object-fit: cover"
+										alt="Flags of Various Countries"
+									/>
+									<div class="caption-container">
+										<div>
+											<audio
+												controls
+												style="
+													width: 400px;
+													height: 40px;
+													border-radius: 8px;
+													padding: 5px;
+													position: relative;
+													left: 0px;
+												"
+											>
+												<source
+													src="assets/audio/audio1-2a.mp3"
+													type="audio/mpeg"
+												/>
+												Your browser does not support the audio element.
+											</audio>
+										</div>
+										<br />
+										<h1>What is a limerick?</h1>
+										<br />
+										<p
+											style="
+												font-size: 2rem;
+												text-align: left;
+												text-indent: 1rem;
+												margin: 2rem;
+												padding: 1vh;
+												text-align: justify;
+											"
+										>
+											<span class="tooltip">
+												A limerick is a funny rhyming poem.
+												<span class="tooltiptext"
+													>リメリック（五行詩）は面白く韻を踏む詩のことです。</span
+												>
+											</span>
+											<span class="tooltip">
+												Lines 1, 2, and 5 have a strong rhythm
+												<i>(da-DUM-da-da-DUM-da-da-DUM)</i> and end in one
+												sound.
+												<span class="tooltiptext"
+													>1行目、2行目、5行目は強いリズム（リズムパターン）を持ち、同じ音で終わります。</span
+												>
+											</span>
+											<span class="tooltip">
+												Lines 3 and 4 have a shorter rhythm
+												<i>(da-DUM-da-da-DUM)</i>and end in another sound.
+												<span class="tooltiptext"
+													>3行目と4行目はより短いリズムで、別の音で終わります。</span
+												>
+											</span>
+											<span class="tooltip">
+												Read these limericks out loud and try to make your own!
+												<span class="tooltiptext"
+													>これらのリメリックを声に出して読んで、自分でも作ってみましょう！</span
+												>
+											</span>
+											<span class="tooltip">
+												Limericks are a great way to learn English rhythm.
+												<span class="tooltiptext"
+													>英語のリズムを学ぶのにとても良い方法です。</span
+												>
+											</span>
+										</p>
+
+										<div class="numbertext">1 / 4</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="mySlides1">
+								<div class="slide-content">
+									<img
+										src="/assets/Web/2 - Story/2.png"
+										class="slide-image"
+										style="height: 90vh; object-fit: cover"
+										alt="A Punny Story"
+									/>
+									<div
+										class="caption-container"
+										style="
+											display: flex;
+											flex-direction: column;
+											flex-grow: 1;
+											height: 100%;
+											padding: 20px;
+											box-sizing: border-box;
+										"
+									>
+										<audio
+											controls
+											style="
+												width: 400px;
+												height: 40px;
+												border-radius: 8px;
+												padding: 5px;
+												position: relative;
+												left: 0px;
+											"
+										>
+											<source
+												src="assets/audio/audio1-2d.mp3"
+												type="audio/mpeg"
+											/>
+											Your browser does not support the audio element.
+										</audio>
+										<br /><br />
+										<p
+											style="
+												font-size: 2rem;
+												text-align: left;
+												text-indent: 1rem;
+												margin: 2rem;
+												padding: 1vh;
+												text-align: justify;
+											"
+										>
+											<span class="tooltip">
+												A <u>student</u> was <u>sitting</u> in
+												<u>class</u>,<br />
+												Just <u>waiting</u> for <u>minutes</u> to
+												<u>pass</u>.<br />
+												He <u>looked</u> at the <u>clock</u>,<br />
+												Heard a <u>tick</u> and a <u>tock</u>,<br />
+												Then <u>ran</u> out to <u>play</u> on the <u>grass</u>!
+												<span class="tooltiptext"
+													>ある生徒が授業中に座り、時間が過ぎるのをただ待っていました。時計を見ると、チクタクという音が聞こえ、そして芝生の上へ遊びに走り出しました！</span
+												>
+											</span>
+										</p>
+										<p
+											style="
+												font-size: 2rem;
+												text-align: left;
+												text-indent: 1rem;
+												margin: 2rem;
+												padding: 1vh;
+												text-align: justify;
+											"
+										>
+											Remember the rhythm here!<br /><br />
+										</p>
+										<ul>
+											<li>da - DUM - da - da - DUM - da - da - DUM</li>
+											<li>da - DUM - da - da - DUM - da - da - DUM</li>
+											<li>da - DUM - da - da - DUM</li>
+											<li>da - (da) - DUM - da - da - DUM</li>
+											<li>
+												da - DUM - da - da - DUM - da - da - DUM<br /><br />
+											</li>
+										</ul>
+										<p
+											style="
+												font-size: 2rem;
+												text-align: left;
+												text-indent: 1rem;
+												margin: 2rem;
+												padding: 1vh;
+												text-align: justify;
+											"
+										>
+											Also, take a look at the rhyming words at the end.
+										</p>
+										<ul>
+											<li>class</li>
+											<li>pass</li>
+											<li>clock</li>
+											<li>tock</li>
+											<li>grass</li>
+										</ul>
+
+										<div class="numbertext">2 / 4</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="mySlides1">
+								<div class="slide-content">
+									<img
+										src="/assets/Web/2 - Story/1.png"
+										class="slide-image"
+										style="height: 90vh; object-fit: cover"
+										alt="A Punny Story"
+									/>
+									<div
+										class="caption-container"
+										style="
+											display: flex;
+											flex-direction: column;
+											flex-grow: 1;
+											height: 100%;
+											padding: 20px;
+											box-sizing: border-box;
+										"
+									>
+										<audio
+											controls
+											style="
+												width: 400px;
+												height: 40px;
+												border-radius: 8px;
+												padding: 5px;
+												position: relative;
+												left: 0px;
+											"
+										>
+											<source
+												src="assets/audio/audio1-2c.mp3"
+												type="audio/mpeg"
+											/>
+											Your browser does not support the audio element.
+										</audio>
+										<br /><br />
+										<p
+											style="
+												font-size: 2rem;
+												text-align: left;
+												text-indent: 1rem;
+												margin: 2rem;
+												padding: 1vh;
+												text-align: justify;
+											"
+										>
+											<span class="tooltip">
+												A sleepy boy sang a slow song,<br />
+												He opened up in a big yawn,<br />
+												A fly buzzed in,<br />
+												Right past his chin,<br />
+												And now the small fly is gone!
+												<span class="tooltiptext"
+													>眠そうな男の子がゆっくりとした歌を歌い、大きなあくびをしました。ハエがアゴをかすめて飛び込み、その小さなハエは消えてしまいました！</span
+												>
+											</span>
+										</p>
+
+										<div class="numbertext">3 / 4</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="mySlides1">
+								<div class="slide-content">
+									<img
+										src="/assets/Web/2 - Story/2.png"
+										class="slide-image"
+										style="height: 90vh; object-fit: cover"
+										alt="A Punny Story"
+									/>
+									<div
+										class="caption-container"
+										style="
+											display: flex;
+											flex-direction: column;
+											flex-grow: 1;
+											height: 100%;
+											padding: 20px;
+											box-sizing: border-box;
+										"
+									>
+										<audio
+											controls
+											style="
+												width: 400px;
+												height: 40px;
+												border-radius: 8px;
+												padding: 5px;
+												position: relative;
+												left: 0px;
+											"
+										>
+											<source
+												src="assets/audio/audio1-2d.mp3"
+												type="audio/mpeg"
+											/>
+											Your browser does not support the audio element.
+										</audio>
+										<br /><br />
+										<p
+											style="
+												font-size: 2rem;
+												text-align: left;
+												text-indent: 1rem;
+												margin: 2rem;
+												padding: 1vh;
+												text-align: justify;
+											"
+										>
+											<span class="tooltip">
+												There once was a very fat cat<br />
+												Who was chasing a little brown rat,<br />
+												He jumped over a ball,<br />
+												And had a big fall,<br />
+												And then hit the floor with a splat!
+												<span class="tooltiptext"
+													>昔、小さな茶色のネズミを追いかけているとても太った猫がいました。ボールを飛び越え、派手に転び、床にベチャッとぶつかりました！</span
+												>
+											</span>
+										</p>
+
+										<div class="numbertext">4 / 4</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Navigation buttons -- Change for SlideShow1 or 2 -->
+							<a class="prev" onclick="plusSlides(1, -1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+
+							<br />
+						</div>
+					</div>
+
+					<!-- Modal footer -->
+					<div class="modal-footer">
+						<!-- Thumbnails -- Change for SlideShow1 or 2 -->
+						<div class="thumbnail-container">
+							<!-- Thumbnail 1 -->
+							<img
+								src="/assets/Web/2-Countries/nick-fewings-BAZejJdZ57w-unsplash.jpg"
+								class="thumbnail1 thumbnail"
+								alt="Flags of Various Countries"
+								onclick="currentSlide(1, 1)"
+							/>
+
+							<!-- Thumbnail 2 -->
+							<img
+								src="/assets/Web/2-Countries/nick-fewings-BAZejJdZ57w-unsplash.jpg"
+								class="thumbnail1 thumbnail"
+								alt="Flags of Various Countries"
+								onclick="currentSlide(1, 2)"
+							/>
+
+							<!-- Thumbnail 3 -->
+							<img
+								src="/assets/Web/2 - Story/1.png"
+								class="thumbnail1 thumbnail"
+								alt="A Punny Story"
+								onclick="currentSlide(1, 3)"
+							/>
+
+							<!-- Thumbnail 4 -->
+							<img
+								src="/assets/Web/2 - Story/2.png"
+								class="thumbnail1 thumbnail"
+								alt="A Punny Story"
+								onclick="currentSlide(1, 4)"
+							/>
+
+							<!-- Thumbnail 5 -->
+							<img
+								src="/assets/Web/2 - Story/3.png"
+								class="thumbnail1 thumbnail"
+								alt="A Punny Story"
+								onclick="currentSlide(1, 5)"
+							/>
+
+							<!-- Thumbnail 6 -->
+							<img
+								src="/assets/Web/2 - Story/4.png"
+								class="thumbnail1 thumbnail"
+								alt="A Punny Story"
+								onclick="currentSlide(1, 6)"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<button id="prev-portrait" aria-label="Previous Slide">&lt;</button>
+			<button id="next-portrait" aria-label="Next Slide">&gt;</button>
+		</main>
+
+		<canvas id="snowfall"></canvas>
+
+		<script src="/assets/scripts/scripts-snow.js" defer></script>
+		<script src="/assets/scripts/scripts-magazine-nav.js" defer></script>
+		<script
+			type="text/javascript"
+			src="/assets/scripts/scripts-slideshow.js"
+		></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"></script>
+		<script
+			type="text/javascript"
+			src="/assets/scripts/scripts-audio-player.js"
+		></script>
+	</body>
+</html>

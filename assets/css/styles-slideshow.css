@@ -1,0 +1,269 @@
+/* =========================================================
+   Modal Slideshow 
+   ========================================================= */
+
+.modal-content-slideshow {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	max-height: 100vh;
+	padding: 1vw;
+	margin: auto;
+	background-color: var(--bg-color-divs);
+	color: var(--text-color);
+	box-shadow: var(--box-shadow);
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+/* =========================================================
+   Slideshow Container
+   ========================================================= */
+
+.slideshow-container {
+	flex: 1;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+/* =========================================================
+   Individual Slides
+   ========================================================= */
+
+[class^="mySlides"] {
+	display: none;
+	width: 100%;
+	height: 100%;
+}
+
+/* =========================================================
+   Slide Layout (CSS GRID — HARD SPLIT)
+   ========================================================= */
+
+.slide-content {
+	display: grid;
+	grid-template-columns: 55% 45%; /* HARD LIMIT */
+	width: 100%;
+	height: 100%;
+	gap: 1.5vh;
+}
+
+/* =========================================================
+   Image Panel (Wrapper)
+   ========================================================= */
+
+.image-panel {
+	width: 100%;
+	height: 100%;
+	overflow: hidden; /* REQUIRED for full-bleed cropping */
+	box-shadow: var(--box-shadow);
+	vertical-align: middle;
+	margin: auto;
+}
+
+/* =========================================================
+   Image Styling (FULL BLEED — ALWAYS)
+   ========================================================= */
+
+.slide-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* FORCE FILL */
+	object-position: center; /* SMART DEFAULT */
+	display: block;
+}
+
+/* =========================================================
+   Caption Panel
+   ========================================================= */
+
+.caption-container {
+	min-height: 0; /* 🔑 REQUIRED for grid scrolling */
+	width: 100%;
+	height: 100%;
+	max-height: 100%;
+	background-color: var(--bg-color-divs);
+	color: var(--text-color);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start; /* NOT center */
+	align-items: center;
+	text-align: center;
+	box-shadow: var(--box-shadow);
+	padding: 4%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	overflow-wrap: normal;
+}
+
+.caption-text {
+	min-height: 0; /* 🔑 REQUIRED */
+	flex: 1 1 auto;
+
+	overflow-x: hidden;
+	overflow-y: auto;
+	width: 100%;
+	scrollbar-gutter: stable;
+	scrollbar-width: thin;
+	scrollbar-color: rgba(255, 255, 255, 0.085) transparent;
+}
+
+.caption-text::-webkit-scrollbar {
+	width: 1px;
+}
+
+.caption-text::-webkit-scrollbar-thumb {
+	background-color: rgba(255, 255, 255, 0.85);
+	border-radius: 0px;
+}
+
+.caption-text::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+.caption-container audio {
+	flex: 0 0 auto;
+}
+
+/* =========================================================
+   Slide Counter
+   ========================================================= */
+
+/* Number text (1/7 etc) */
+.numbertext {
+	color: rgb(251, 255, 180);
+	font-size: 2vh;
+	padding: 2vh 6vh;
+	position: absolute;
+}
+
+/* =========================================================
+   Thumbnails
+   ========================================================= */
+
+.thumbnail-container {
+	display: flex;
+	justify-content: center;
+	margin-top: 1.5vh;
+}
+
+.thumbnail1,
+.thumbnail2,
+.thumbnail3 {
+	width: 5vh;
+	height: 5vh;
+	object-fit: cover;
+	margin: 0 1vh;
+	cursor: pointer;
+	opacity: 0.75;
+	border: 2px solid transparent;
+	transition:
+		opacity 0.3s,
+		border-color 0.3s;
+}
+
+.thumbnail1:hover,
+.thumbnail2:hover,
+.thumbnail3:hover,
+.active-thumbnail {
+	opacity: 1;
+	border-color: #ffffff;
+}
+
+/* =========================================================
+   Cursor Helper
+   ========================================================= */
+
+.cursor {
+	cursor: pointer;
+}
+
+/* =========================================================
+   Mobile / Portrait Layout
+   ========================================================= */
+
+@media screen and (max-width: 768px), screen and (orientation: portrait) {
+	.modal-content-slideshow {
+		padding-top: 60px; /* Adjust for mobile header */
+	}
+	.slideshow-container {
+		flex-direction: column;
+		height: auto;
+		overflow: scroll;
+		overflow-x: hidden;
+		width: 100%;
+	}
+	.slide-content {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto;
+		height: auto;
+	}
+	/* Image styling */
+	.slide-image {
+		max-height: 100%;
+		max-width: 100%;
+		height: 100%;
+
+		width: 100%;
+		flex: 0 0 auto;
+		min-height: 90%;
+		object-fit: cover;
+	}
+	.image-panel {
+		min-height: 60vh; /* HARD IMAGE HEIGHT ON MOBILE */
+		height: max-content; /* Make sure the content is 1:1 or horizontal */
+	}
+	/* Text container styling with center alignment */
+	.caption-container {
+		/*padding: 5% 5%;
+		max-height: 100%;
+		max-width: 100%;
+		width: 100%;
+		margin-left: 0vh; /* Adjust as necessary for spacing */
+		/*min-height: 50vh; /* Ensure enough height for text */
+		/*height: auto;*/
+
+		display: block;
+		padding: 6% 5%;
+		min-height: max-content;
+		height: auto;
+		text-align: center;
+	}
+
+	.caption-container audio {
+		width: 100%;
+		max-width: 80%; /*420px;*/
+		margin: 0 auto 2rem auto;
+		display: block;
+	}
+}
+
+/* =========================================================
+   Horizontal Scroll Layout
+   ========================================================= */
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+	.caption-text {
+		overflow-y: auto;
+		overflow-x: none;
+	}
+}
+@media screen and (max-height: 700px) and (orientation: landscape) {
+	.caption-text {
+		overflow-y: auto;
+		overflow-x: none;
+	}
+}
+@media (hover: hover) {
+	.caption-text::-webkit-scrollbar-thumb {
+		background-color: transparent;
+	}
+
+	.caption-text:hover::-webkit-scrollbar-thumb {
+		background-color: rgba(255, 255, 255, 0.35);
+	}
+}

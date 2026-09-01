@@ -1,0 +1,32 @@
+.tooltip {
+	position: relative;
+	cursor: pointer;
+	color: var(--tooltip-color);
+}
+
+/* Floating tooltip */
+.tooltip .tooltiptext {
+	position: fixed; /* 👈 FOLLOW THE SCREEN, NOT THE ELEMENT */
+	visibility: hidden;
+	opacity: 0;
+
+	width: 20vh;
+	background-color: var(--tooltip-bg-color);
+	color: var(--tooltip-text-color);
+	text-align: center;
+	border-radius: 2vh;
+	padding: 1vh;
+	font-size: 2vh;
+
+	pointer-events: none; /* 👈 prevents flicker */
+	z-index: 99999; /* 👈 above modals, slideshows, everything */
+
+	transform: translate(12px, 12px); /* offset from cursor */
+	transition: opacity 0.15s ease;
+}
+
+/* Show tooltip */
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+	opacity: 0.95;
+}

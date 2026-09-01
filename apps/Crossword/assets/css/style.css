@@ -1,0 +1,341 @@
+@font-face {
+	font-family: "Klee One";
+	src: url("../../../../assets/font/kleeone_regular.ttf") format("truetype");
+
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Klee One";
+	src: url("../../../../assets/font/kleeone_semibold.ttf") format("truetype");
+
+	font-weight: bold;
+}
+
+* {
+	font-family: "Klee One", Arial, sans serif;
+	font-weight: bold;
+}
+
+:root {
+	--bg-main: #ffffff;
+	--bg-panel: #e6e6e6;
+	--bg-appbar: #2a3f7a;
+	--bg-overlay: rgba(255, 255, 255, 0.85);
+	--bg-noad: blue;
+	--bg-noborder: #000000;
+	--bg-vkeyboard: rgba(255, 255, 255, 0.85);
+
+	--text-main: #000000;
+	--text-invert: #ffffff;
+
+	--td-border-width: 1px;
+	--td-border-style: solid;
+	--td-border-color: #02010a;
+	--border-main: #000000;
+	--border-soft: #919090;
+
+	--accent: #2a3f7a;
+	--bg-hover: rgba(255, 255, 0, 0.625);
+
+	--scrollbar-track: #ffffff;
+	--scrollbar-thumb: #000000;
+	--scrollbar-thumb-hover: #555;
+}
+
+html.dark {
+	color-scheme: dark;
+}
+html.light {
+	color-scheme: light;
+}
+
+body {
+	font-family: "Klee One";
+	padding-top: 50px;
+	padding-bottom: 70px;
+	user-select: none;
+}
+
+/* SCROLLBAR STYLING */
+/* width */
+::-webkit-scrollbar {
+	width: 2px;
+	height: 2px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+	background: var(--scrollbar-track);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: var(--scrollbar-thumb);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: var(--scrollbar-thumb-hover);
+}
+
+#appbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: var(--bg-appbar);
+	color: var(--text-invert);
+	z-index: 313;
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+}
+.abitem {
+	padding: 20px;
+	display: inline-block;
+}
+.noad {
+	text-align: center;
+}
+.noad button {
+	border: none;
+	background-color: var(--bg-noad);
+	color: var(--text-invert);
+	padding: 10px;
+	border-radius: 5px;
+	margin: 5px;
+}
+#drawer {
+	background-color: var(--bg-panel);
+	width: 512px;
+	max-width: 85%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	padding-top: 70px;
+	display: none;
+	overflow: auto;
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+}
+
+#crossword {
+	text-align: left;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.crossword {
+	display: flex;
+	border-collapse: collapse;
+	font-family: "Klee One", Courier, monospace;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	flex: 1;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.cluebox {
+	display: flex;
+	text-align: center;
+	vertical-align: middle;
+	flex-direction: column;
+	flex: 1;
+	margin-left: 20px; /* Adjust the margin as needed */
+}
+
+.crossword td {
+	border-width: var(--td-border-width);
+	border-style: var(--td-border-style);
+	border-color: rgba(48, 54, 164, 0.901);
+
+	padding: 0;
+	margin: 0;
+	vertical-align: middle;
+	padding: 0;
+	text-align: center;
+	width: 30px;
+	height: 30px;
+}
+
+.no-border {
+	background-color: var(--bg-noborder);
+}
+
+.crossword .no-border {
+	border: none;
+}
+
+.crossword td.number-png {
+	filter: none;
+}
+
+.clues {
+	text-align: center;
+	vertical-align: middle;
+}
+#clues {
+	font-size: 20px;
+	margin: 1 auto;
+	line-height: 1.5;
+	padding: 0px;
+}
+
+#clues td {
+	vertical-align: top;
+	margin: 0 auto;
+	text-align: left;
+	padding: 10px;
+}
+
+.canswer {
+	display: none;
+	color: var(--text-main);
+}
+button {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 20px;
+	border: none;
+	outline: none;
+	background-color: var(--bg-appbar);
+	color: var(--text-invert);
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#vkeyboard {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--bg-vkeyboard);
+	text-align: center;
+	display: none;
+	padding: 10px;
+	z-index: 13;
+	padding-top: 70px;
+}
+.kbtn {
+	padding: 10px;
+	border: 1px solid var(--border-main);
+	background-color: var(--bg-panel);
+	margin: 5px;
+	display: inline-block;
+	width: 30px;
+}
+th {
+	text-align: left;
+	font-weight: bold;
+}
+ul,
+li {
+	list-style-type: none;
+	list-style-position: inside;
+	margin: 0;
+	margin-right: 5px;
+	padding: 0;
+}
+
+#game {
+	margin-bottom: 10px;
+	padding: 10px;
+	display: none;
+}
+
+.ditem {
+	padding: 1em;
+	border-bottom: 1px solid var(--border-main);
+	margin-bottom: 3px;
+}
+
+td:hover {
+	background-color: var(--bg-hover);
+}
+/* Solid border */
+hr.solid {
+	border-top: 1px solid var(--border-soft);
+	width: 100%;
+}
+
+/* --- Media Queries --- */
+
+/* Landscape Orientation (Default styles seem landscape-first, so this might refine) */
+@media screen and (orientation: landscape) {
+	/* Styles specific to landscape */
+	/* Example: You might adjust grid columns or container sizes here */
+	/* The original rule is kept for reference, but check if #container base styles suffice */
+	#container {
+		height: 100vh; /* Full height of viewport */
+		/* width: 100vw; */ /* Already set */
+		/* max-width: 177.77vh; */ /* Aspect ratio constraint using vh */
+		/* height: 56.25vw; */ /* Already set */
+		/* max-height: 100vh; */ /* Already set */
+	}
+}
+
+/* Smaller Screens (Example: Tablets) */ /* --- Mobile Styles (screens <= 768px) --- and (orientation: portrait) and */
+@media screen and (max-width: 768px) {
+	#container {
+		flex-direction: column; /* Stack elements vertically */
+	}
+}
+
+/* Dark Mode doesn't always work consistently since javascript generation interferes with regular CSS */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg-main: #000000;
+		--bg-panel: #1a1a1a;
+		--bg-appbar: #1e2f5c;
+		--bg-overlay: rgba(0, 0, 0, 0.85);
+		--bg-noad: blue;
+		--bg-noborder: #000000;
+		--bg-vkeyboard: rgba(38, 37, 37, 0.919);
+
+		--text-main: #ffffff;
+		--text-invert: #ffffff;
+
+		--border-main: #ffffff;
+		--border-soft: #666666;
+		--td-border-width: 1px;
+		--td-border-style: solid;
+		--td-border-color: #fffdfd;
+
+		--accent: #4a6cff;
+		--bg-hover: rgba(255, 255, 0, 0.225);
+
+		--scrollbar-track: #000000;
+		--scrollbar-thumb: #ffffff;
+		--scrollbar-thumb-hover: #aaaaaa;
+	}
+
+	.crossword td {
+		background-color: #fffdfd;
+	}
+	.crossword td.no-border {
+		background-color: #080808;
+	}
+	.canswer {
+		color: #a00404;
+	}
+	#vkeyboard {
+		background-color: var(--bg-vkeyboard);
+		color: #ffffff;
+	}
+	.kbtn {
+		background-color: #c4c2d2;
+		color: #000000;
+
+		/* .crossword td.number-png {
+		filter: invert(1);
+	}  */
+	}
+}

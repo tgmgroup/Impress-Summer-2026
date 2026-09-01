@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Impress Magazine - Summer, 2026</title>
+		<link rel="stylesheet" href="/assets/css/styles.css" />
+		<link rel="icon" type="image/x-icon" href="/assets/nav-images/logo.png" />
+		<link id="favicon" rel="shortcut icon" href="/assets/nav-images/logo.png" />
+
+		<link href="/assets/css/styles-tooltip.css" rel="stylesheet" />
+		<link href="/assets/css/styles-modal.css" rel="stylesheet" />
+		<link href="/assets/css/styles-audio-player.css" rel="stylesheet" />
+
+		<script type="text/javascript" src="/assets/scripts/scripts.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"></script>
+
+		<script>
+			(function () {
+				try {
+					const savedTheme = localStorage.getItem("theme");
+					const prefersDark = window.matchMedia(
+						"(prefers-color-scheme: dark)",
+					).matches;
+					if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+						document.documentElement.classList.add("dark");
+					} else if (savedTheme === "light") {
+						document.documentElement.classList.remove("dark");
+					} else {
+						// Default to dark if nothing set and system isn't dark
+						document.documentElement.classList.add("dark");
+					}
+				} catch (e) {
+					console.error("Error applying initial theme class:", e);
+				}
+			})();
+		</script>
+	</head>
+	<body>
+		<nav id="icon-nav">
+			<a
+				href="https://impress.isesaki.in"
+				aria-label="Impress Magazine Gallery"
+				class="slide-nav-trigger"
+				data-target-slide="slide-alpha"
+				>&#128213;</a
+			>
+			<a
+				href="index.html"
+				aria-label="Front Cover"
+				class="slide-nav-trigger"
+				data-target-slide="slide-beta"
+				>&#x23EA;</a
+			>
+			<a href="1.html" aria-label="1">&#x0031;</a>
+			<a href="1.html" aria-label="2">&#x0032;</a>
+			<a href="3.html" aria-label="3">&#x0033;</a>
+			<a href="3.html" aria-label="4">&#x0034;</a>
+			<a href="5.html" aria-label="5">&#x0035;</a>
+			<a href="5.html" aria-label="6">&#x0036;</a>
+			<a href="cover.html" aria-label="Back Cover">&#x23E9;</a>
+			<a href="about.html" aria-label="About">&#128209;</a>
+			<button id="theme-toggle" aria-label="Switch theme"></button>
+
+			<button id="snow-toggle" aria-label="Toggle Snowflakes">&#x2744;</button>
+		</nav>
+
+		<main id="hero">
+			<div id="container">
+				<!-- Your website content goes here -->
+
+				<div class="item sidebar sidebar-left"></div>
+
+				<div class="item gap-left"></div>
+
+				<div
+					class="item content-center"
+					id="page-content"
+					style="
+						background-image: url(&quot;/assets/Web/page00.webp&quot;);
+						background-size: contain;
+						background-position: center;
+						background-repeat: no-repeat;
+					"
+					data-page-number="0"
+					data-prev-page="about.html"
+					data-next-page="1.html"
+					data-landscape-bg="/assets/Web/page00.webp"
+				>
+					<div class="left-content">
+						<!-- Audio for Intro Text -->
+						<audio id="audio1-1" class="playondemand">
+							<source src="./assets/audio/audio0-0.mp3" type="audio/mp3" />
+						</audio>
+
+						<audio
+							id="audio1-1a"
+							class="playondemand"
+							controls
+							style="display: none"
+						>
+							<source src="./assets/audio/audio0-1.mp3" type="audio/mpeg" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</div>
+
+				<div class="item gap-right"></div>
+				<div class="item sidebar sidebar-right">
+					<!-- Buttons for Intro Text -->
+					<button
+						class="center-items right-nav-buttons clickable"
+						type="button"
+						onClick="PlayAndShowWithNav('audio1-1', 'text1-1', 'play1-1', 'prev-portrait', 'next-portrait')"
+					>
+						<img
+							id="play1-1"
+							class="audio-button-image clickable"
+							src="/assets/nav-images/play-g79150a13d_1280.png"
+						/>
+						<h6 style="margin: auto">Introduction</h6>
+					</button>
+
+					<form
+						action="https://in.isesaki.in/impress-summer-2026"
+						method="get"
+						target="_blank"
+					>
+						<button
+							class="center-items right-nav-buttons clickable"
+							type="submit"
+						>
+							<img
+								id="play1-2"
+								class="audio-button-image clickable"
+								src="/assets/nav-images/link.png"
+							/>
+							<h6 style="margin: auto">Materials for This Issue</h6>
+						</button>
+					</form>
+
+					<form
+						action="https://sites.google.com/isesaki-school.ed.jp/impress/contact"
+						method="get"
+						target="_blank"
+					>
+						<button
+							class="center-items right-nav-buttons clickable"
+							type="submit"
+						>
+							<img
+								id="play1-3"
+								class="audio-button-image clickable"
+								src="/assets/nav-images/link.png"
+							/>
+							<h6 style="margin: auto">Contact Us</h6>
+						</button>
+					</form>
+				</div>
+			</div>
+
+			<div class="items hidden-text" id="text1-1">
+				<!-- Modal content -->
+				<div class="modal-content">
+					<div class="text-container">
+						<div class="modal-header">
+							<span
+								class="close clickable"
+								onClick="stopAudioPlayer(),ResetPlayAndShowWithNav('audio1-1', 'text1-1', 'play1-1', 'prev-portrait', 'next-portrait'), ResetPlayAndShowWithNav('audio1-1a', 'text1-1', 'play1-1a', 'prev-portrait', 'next-portrait')"
+								>&times;</span
+							>
+							<span
+								class="modal-play-left clickable"
+								onClick="PlaySoundWithControls('audio1-1a', 'play1-1a')"
+							></span>
+						</div>
+
+						<div class="modal-body">
+							<h1>Introduction</h1>
+
+							<p
+								style="
+									font-size: 2rem;
+									text-align: left;
+									text-indent: 1rem;
+									margin: 2rem;
+									padding: 1vh;
+									text-align: justify;
+								"
+							>
+								<span class="tooltip">
+									Walt Disney was a man of many dreams.
+									<span class="tooltiptext"
+										>ウォルト・ディズニーは多くの夢を持った人でした。</span
+									>
+								</span>
+								<span class="tooltip">
+									He gave us the world of Disney and all of its magical
+									characters: Mickey, Minnie, Snow White, Cinderella, and many
+									more.
+									<span class="tooltiptext"
+										>彼は私たちにディズニーの世界と、ミッキー、ミニー、白雪姫、シンデレラなどの魔法のようなキャラクターたちを贈ってくれました。</span
+									>
+								</span>
+								<span class="tooltip">
+									He wanted to create a place where people could escape from
+									their hard lives in the real world and enter a world of
+									imagination.
+									<span class="tooltiptext"
+										>彼は、人々が現実世界の厳しい生活から抜け出し、想像の世界に入れるような場所を作りたいと考えていました。</span
+									>
+								</span>
+								<span class="tooltip">
+									It was the 1930's.
+									<span class="tooltiptext">時は1930年代でした。</span>
+								</span>
+								<span class="tooltip">
+									The world was very poor, and it was very difficult for people
+									to live well.
+									<span class="tooltiptext"
+										>世界はとても貧しく、人々が豊かに暮らすことは非常に困難でした。</span
+									>
+								</span>
+							</p>
+
+							<p
+								style="
+									font-size: 2rem;
+									text-align: left;
+									text-indent: 1rem;
+									margin: 2rem;
+									padding: 1vh;
+									text-align: justify;
+								"
+							>
+								<span class="tooltip">
+									Have you ever thought about why we make
+									<i>Impress Magazine</i>?
+									<span class="tooltiptext"
+										>なぜ私たちが『インプレスマガジン』を作っているのか考えたことはありますか？</span
+									>
+								</span>
+								<span class="tooltip">
+									One of my students once went to an English camp in Tokyo, and
+									after he came back, he said, "I learned how to communicate in
+									real life, which I cannot learn in regular English classes."
+									<span class="tooltiptext"
+										>私の生徒の一人が以前東京のイングリッシュキャンプに参加し、帰ってきたあとに「通常の英語の授業では学べない、実際の生活でのコミュニケーション方法を学べた」と言っていました。</span
+									>
+								</span>
+								<span class="tooltip">
+									It's difficult for us to really use English even in school.
+									<span class="tooltiptext"
+										>学校の中でさえ、私たちが本当に英語を使うのは難しいことです。</span
+									>
+								</span>
+								<span class="tooltip">
+									So with <i>Impress Magazine</i>, we want to give you a chance
+									to learn native-level, useful English.
+									<span class="tooltiptext"
+										>だからこそ『インプレスマガジン』を通して、ネイティブレベルの役に立つ英語を学ぶ機会を届けたいと思っています。</span
+									>
+								</span>
+								<span class="tooltip">
+									We want you to have fun learning things that your textbooks
+									don't teach you.
+									<span class="tooltiptext"
+										>教科書では教わらないことを楽しく学んでほしいのです。</span
+									>
+								</span>
+								<span class="tooltip">
+									And then maybe you can escape the difficulty of studying and
+									enter your own world of creativity in English.
+									<span class="tooltiptext"
+										>そして、勉強の辛さから抜け出し、英語を使った自分だけの創造の世界に入ることができるかもしれません。</span
+									>
+								</span>
+							</p>
+
+							<p
+								style="
+									font-size: 2rem;
+									text-align: left;
+									text-indent: 1rem;
+									margin: 2rem;
+									padding: 1vh;
+									text-align: justify;
+								"
+							>
+								<span class="tooltip">
+									Walt Disney once said, "<i
+										>All our dreams can come true if we have the courage to
+										pursue them.</i
+									>"
+									<span class="tooltiptext"
+										>ウォルト・ディズニーはかつて「追い求める勇気があれば、すべての夢はかなう」と言いました。</span
+									>
+								</span>
+								<span class="tooltip">
+									I hope that you also have the courage to pursue your dreams,
+									and I hope that just like Walt Disney, you can go beyond the
+									classroom and fill your life with imagination and hope (in
+									English), too.
+									<span class="tooltiptext"
+										>あなたも自分の夢を追いかける勇気を持ってほしいですし、ウォルト・ディズニーのように、教室を飛び出して、（英語を通して）自分の人生を想像力と希望で満たしてほしいと願っています。</span
+									>
+								</span>
+							</p>
+
+							<p
+								style="
+									font-size: 2rem;
+									text-align: left;
+									text-indent: 1rem;
+									margin: 2rem;
+									padding: 1vh;
+									text-align: right;
+								"
+							>
+								-- George
+							</p>
+						</div>
+
+						<div class="modal-footer">
+							<div class="audio-player">
+								<button class="audio-button" id="playPauseBtn">▶️</button>
+								<audio
+									id="playAudio"
+									src="assets/audio/audio0-1.mp3"
+									type="audio/mp3"
+								></audio>
+								<canvas class="waveform-canvas"></canvas>
+								<div class="time">
+									<span class="currentTime">0:00</span>
+									<span class="duration">0:00</span>
+								</div>
+								<div class="controls">
+									<label>🔊</label>
+									<input
+										type="range"
+										class="volume"
+										min="0"
+										max="1"
+										step="0.05"
+										value="1"
+									/>
+									<label>⏩</label>
+									<input
+										type="range"
+										class="speed"
+										min="0.5"
+										max="2"
+										step="0.05"
+										value="1"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<button id="prev-portrait" aria-label="Previous Slide">&lt;</button>
+			<button id="next-portrait" aria-label="Next Slide">&gt;</button>
+		</main>
+
+		<canvas id="snowfall"></canvas>
+
+		<script src="/assets/scripts/scripts-snow.js" defer></script>
+		<script src="/assets/scripts/scripts-magazine-nav.js"></script>
+		<script
+			type="text/javascript"
+			src="/assets/scripts/scripts-audio-player.js"
+		></script>
+	</body>
+</html>
