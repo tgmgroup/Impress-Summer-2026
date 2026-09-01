@@ -100,11 +100,7 @@
 					<div class="left-content">
 						<!-- Audio -->
 
-						<audio id="audio1-2" class="playondemand">
-							<!-- empty audio, just used to open the modal -->
-							<source src="./assets/audio/audio3-2.mp3" type="audio/mp3" />
-						</audio>
-						<audio id="audio1-3" class="playondemand">
+						<audio id="audio1-1" class="playondemand">
 							<!-- empty audio, just used to open the modal -->
 							<source src="./assets/audio/audio3-2.mp3" type="audio/mp3" />
 						</audio>
@@ -115,58 +111,18 @@
 				<div class="item sidebar sidebar-right">
 					<!-- Buttons for Intro Text -->
 
-					<form
-						action="/apps/Word-Search/wordsearch.html"
-						method="get"
-						target="_blank"
-					>
-						<button
-							class="center-items right-nav-buttons clickable"
-							type="submit"
-						>
-							<img
-								id="play1-3"
-								class="audio-button-image clickable"
-								src="/assets/nav-images/link.png"
-							/>
-							<h6 style="margin: auto">Word Search</h6>
-						</button>
-					</form>
 					<button
 						class="center-items right-nav-buttons clickable"
 						type="button"
-						onClick="PlayAndShowWithNav('audio1-2', 'text1-1', 'play1-1', 'prev-portrait', 'next-portrait')"
+						onClick="PlayAndShowWithNav('audio1-1', 'text1-1', 'play1-1', 'prev-portrait', 'next-portrait')"
 					>
 						<img
 							id="play1-1"
 							class="audio-button-image clickable"
 							src="/assets/nav-images/play-g79150a13d_1280.png"
+							alt="Play"
 						/>
-						<h6 style="margin: auto">Easy Article</h6>
-					</button>
-					<button
-						class="center-items right-nav-buttons clickable"
-						type="button"
-						onClick="PlayAndShowWithNav('audio1-2', 'text1-2', 'play1-2', 'prev-portrait', 'next-portrait')"
-					>
-						<img
-							id="play1-2"
-							class="audio-button-image clickable"
-							src="/assets/nav-images/play-g79150a13d_1280.png"
-						/>
-						<h6 style="margin: auto">Main Article</h6>
-					</button>
-					<button
-						class="center-items right-nav-buttons clickable"
-						type="button"
-						onClick="PlayAndShowWithNav('audio1-3', 'text1-3', 'play1-3', 'prev-portrait', 'next-portrait')"
-					>
-						<img
-							id="play1-3"
-							class="audio-button-image clickable"
-							src="/assets/nav-images/play-g79150a13d_1280.png"
-						/>
-						<h6 style="margin: auto">Extra Pictures</h6>
+						<h6 style="margin: auto">Goshi ES's Dream Summers</h6>
 					</button>
 				</div>
 			</div>
@@ -179,7 +135,7 @@
 							class="close clickable"
 							onclick="
 								ResetPlayAndShowWithNav(
-									'audio1-2',
+									'audio1-1',
 									'text1-1',
 									'play1-1',
 									'prev-portrait',
@@ -194,33 +150,21 @@
 						<!-- Add the image slideshow here -->
 						<div id="slideshow-container1" class="slideshow-container">
 							<!-- Slides -- Change for SlideShow1 or 2 -->
+
+							<!-- Slide 1 -->
 							<div class="mySlides1">
-								<div class="slide-content">
+								<div
+									class="slide-content"
+									style="grid-template-columns: 65% 35%"
+								>
 									<div class="image-panel">
 										<img
-											src="/assets/Web/3 - Bali/E1.jpg"
+											src="/assets/Web/3-Vacations/Vacation (1).webp"
 											class="slide-image"
-											alt="George in Bali"
+											alt="My Dream Vacation 1"
 										/>
 									</div>
 									<div class="caption-container" style="vertical-align: middle">
-										<audio
-											controls
-											style="
-												width: 400px;
-												height: 40px;
-												border-radius: 8px;
-												padding: 5px;
-												position: relative;
-												left: 0px;
-											"
-										>
-											<source
-												src="assets/audio/audio3-1a.mp3"
-												type="audio/mpeg"
-											/>
-											Your browser does not support the audio element.</audio
-										><br /><br />
 										<p
 											style="
 												font-size: 3rem;
@@ -231,41 +175,27 @@
 												text-align: justify;
 											"
 										>
-											I think Bali is a great place to visit.
+											Read about Goshi ES's Dream Vacations!
 										</p>
-
-										<div class="numbertext">1 / 6</div>
+										<div class="numbertext">1 / 24</div>
 									</div>
 								</div>
 							</div>
 
+							<!-- Slide 2 -->
 							<div class="mySlides1">
-								<div class="slide-content">
+								<div
+									class="slide-content"
+									style="grid-template-columns: 65% 35%"
+								>
 									<div class="image-panel">
 										<img
-											src="/assets/Web/3 - Bali/E2.jpg"
+											src="/assets/Web/3-Vacations/Vacation (2).webp"
 											class="slide-image"
-											alt="Bali Landscape"
+											alt="My Dream Vacation 2"
 										/>
 									</div>
-									<div class="caption-container">
-										<audio
-											controls
-											style="
-												width: 400px;
-												height: 40px;
-												border-radius: 8px;
-												padding: 5px;
-												position: relative;
-												left: 0px;
-											"
-										>
-											<source
-												src="assets/audio/audio3-1b.mp3"
-												type="audio/mpeg"
-											/>
-											Your browser does not support the audio element.</audio
-										><br /><br />
+									<div class="caption-container" style="vertical-align: middle">
 										<p
 											style="
 												font-size: 3rem;
@@ -276,40 +206,27 @@
 												text-align: justify;
 											"
 										>
-											You can enjoy beautiful beaches.
+											Read about Goshi ES's Dream Vacations!
 										</p>
-
-										<div class="numbertext">2 / 6</div>
+										<div class="numbertext">2 / 24</div>
 									</div>
 								</div>
 							</div>
+
+							<!-- Slide 3 -->
 							<div class="mySlides1">
-								<div class="slide-content">
+								<div
+									class="slide-content"
+									style="grid-template-columns: 65% 35%"
+								>
 									<div class="image-panel">
 										<img
-											src="/assets/Web/3 - Bali/E3.jpg"
+											src="/assets/Web/3-Vacations/Vacation (3).webp"
 											class="slide-image"
-											alt="Bali Hotel Pool"
+											alt="My Dream Vacation 3"
 										/>
 									</div>
-									<div class="caption-container">
-										<audio
-											controls
-											style="
-												width: 400px;
-												height: 40px;
-												border-radius: 8px;
-												padding: 5px;
-												position: relative;
-												left: 0px;
-											"
-										>
-											<source
-												src="assets/audio/audio3-1c.mp3"
-												type="audio/mpeg"
-											/>
-											Your browser does not support the audio element.</audio
-										><br /><br />
+									<div class="caption-container" style="vertical-align: middle">
 										<p
 											style="
 												font-size: 3rem;
@@ -320,40 +237,27 @@
 												text-align: justify;
 											"
 										>
-											You can swim, surf, and relax there.
+											Read about Goshi ES's Dream Vacations!
 										</p>
-
-										<div class="numbertext">3 / 6</div>
+										<div class="numbertext">3 / 24</div>
 									</div>
 								</div>
 							</div>
+
+							<!-- Slide 4 -->
 							<div class="mySlides1">
-								<div class="slide-content">
+								<div
+									class="slide-content"
+									style="grid-template-columns: 65% 35%"
+								>
 									<div class="image-panel">
 										<img
-											src="/assets/Web/3 - Bali/E4.jpg"
+											src="/assets/Web/3-Vacations/Vacation (4).webp"
 											class="slide-image"
-											alt="Mangosteen"
+											alt="My Dream Vacation 4"
 										/>
 									</div>
-									<div class="caption-container">
-										<audio
-											controls
-											style="
-												width: 400px;
-												height: 40px;
-												border-radius: 8px;
-												padding: 5px;
-												position: relative;
-												left: 0px;
-											"
-										>
-											<source
-												src="assets/audio/audio3-1d.mp3"
-												type="audio/mpeg"
-											/>
-											Your browser does not support the audio element.</audio
-										><br /><br />
+									<div class="caption-container" style="vertical-align: middle">
 										<p
 											style="
 												font-size: 3rem;
@@ -364,40 +268,27 @@
 												text-align: justify;
 											"
 										>
-											The food is good, like this mangosteen.
+											Read about Goshi ES's Dream Vacations!
 										</p>
-
-										<div class="numbertext">4 / 6</div>
+										<div class="numbertext">4 / 24</div>
 									</div>
 								</div>
 							</div>
+
+							<!-- Slide 5 -->
 							<div class="mySlides1">
-								<div class="slide-content">
+								<div
+									class="slide-content"
+									style="grid-template-columns: 65% 35%"
+								>
 									<div class="image-panel">
 										<img
-											src="/assets/Web/3 - Bali/E5.jpg"
+											src="/assets/Web/3-Vacations/Vacation (5).webp"
 											class="slide-image"
-											alt="Balinese Food"
+											alt="My Dream Vacation 5"
 										/>
 									</div>
-									<div class="caption-container">
-										<audio
-											controls
-											style="
-												width: 400px;
-												height: 40px;
-												border-radius: 8px;
-												padding: 5px;
-												position: relative;
-												left: 0px;
-											"
-										>
-											<source
-												src="assets/audio/audio3-1e.mp3"
-												type="audio/mpeg"
-											/>
-											Your browser does not support the audio element.</audio
-										><br /><br />
+									<div class="caption-container" style="vertical-align: middle">
 										<p
 											style="
 												font-size: 3rem;
@@ -408,40 +299,27 @@
 												text-align: justify;
 											"
 										>
-											It’s tropical and delicious.
+											Read about Goshi ES's Dream Vacations!
 										</p>
-
-										<div class="numbertext">5 / 6</div>
+										<div class="numbertext">5 / 24</div>
 									</div>
 								</div>
 							</div>
+
+							<!-- Slide 6 -->
 							<div class="mySlides1">
-								<div class="slide-content">
+								<div
+									class="slide-content"
+									style="grid-template-columns: 65% 35%"
+								>
 									<div class="image-panel">
 										<img
-											src="/assets/Web/3 - Bali/E6.jpg"
+											src="/assets/Web/3-Vacations/Vacation (6).webp"
 											class="slide-image"
-											alt="Trash on the Beach"
+											alt="My Dream Vacation 6"
 										/>
 									</div>
-									<div class="caption-container">
-										<audio
-											controls
-											style="
-												width: 400px;
-												height: 40px;
-												border-radius: 8px;
-												padding: 5px;
-												position: relative;
-												left: 0px;
-											"
-										>
-											<source
-												src="assets/audio/audio3-1f.mp3"
-												type="audio/mpeg"
-											/>
-											Your browser does not support the audio element.</audio
-										><br /><br />
+									<div class="caption-container" style="vertical-align: middle">
 										<p
 											style="
 												font-size: 3rem;
@@ -452,10 +330,567 @@
 												text-align: justify;
 											"
 										>
-											But overtourism can be a problem.
+											Read about Goshi ES's Dream Vacations!
 										</p>
+										<div class="numbertext">6 / 24</div>
+									</div>
+								</div>
+							</div>
 
-										<div class="numbertext">6 / 6</div>
+							<!-- Slide 7 -->
+							<div class="mySlides1">
+								<div
+									class="slide-content"
+									style="grid-template-columns: 65% 35%"
+								>
+									<div class="image-panel">
+										<img
+											src="/assets/Web/3-Vacations/Vacation (7).webp"
+											class="slide-image"
+											alt="My Dream Vacation 7"
+										/>
+									</div>
+									<div class="caption-container" style="vertical-align: middle">
+										<p
+											style="
+												font-size: 3rem;
+												text-indent: 1rem;
+												line-height: 1.9;
+												margin-top: 2rem;
+												padding: 0rem;
+												text-align: justify;
+											"
+										>
+											Read about Goshi ES's Dream Vacations!
+										</p>
+										<div class="numbertext">7 / 24</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 8 -->
+							<div class="mySlides1">
+								<div
+									class="slide-content"
+									style="grid-template-columns: 65% 35%"
+								>
+									<div class="image-panel">
+										<img
+											src="/assets/Web/3-Vacations/Vacation (8).webp"
+											class="slide-image"
+											alt="My Dream Vacation 8"
+										/>
+									</div>
+									<div class="caption-container" style="vertical-align: middle">
+										<p
+											style="
+												font-size: 3rem;
+												text-indent: 1rem;
+												line-height: 1.9;
+												margin-top: 2rem;
+												padding: 0rem;
+												text-align: justify;
+											"
+										>
+											Read about Goshi ES's Dream Vacations!
+										</p>
+										<div class="numbertext">8 / 24</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 9 -->
+							<div class="mySlides1">
+								<div
+									class="slide-content"
+									style="grid-template-columns: 65% 35%"
+								>
+									<div class="image-panel">
+										<img
+											src="/assets/Web/3-Vacations/Vacation (9).webp"
+											class="slide-image"
+											alt="My Dream Vacation 9"
+										/>
+									</div>
+									<div class="caption-container" style="vertical-align: middle">
+										<p
+											style="
+												font-size: 3rem;
+												text-indent: 1rem;
+												line-height: 1.9;
+												margin-top: 2rem;
+												padding: 0rem;
+												text-align: justify;
+											"
+										>
+											Read about Goshi ES's Dream Vacations!
+										</p>
+										<div class="numbertext">9 / 24</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 10 -->
+							<div class="mySlides1">
+								<div
+									class="slide-content"
+									style="grid-template-columns: 65% 35%"
+								>
+									<div class="image-panel">
+										<img
+											src="/assets/Web/3-Vacations/Vacation (10).webp"
+											class="slide-image"
+											alt="My Dream Vacation 10"
+										/>
+									</div>
+									<div class="caption-container" style="vertical-align: middle">
+										<p
+											style="
+												font-size: 3rem;
+												text-indent: 1rem;
+												line-height: 1.9;
+												margin-top: 2rem;
+												padding: 0rem;
+												text-align: justify;
+											"
+										>
+											Read about Goshi ES's Dream Vacations!
+										</p>
+										<div class="numbertext">10 / 24</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 11 -->
+							<div class="mySlides1">
+								<div
+									class="slide-content"
+									style="grid-template-columns: 65% 35%"
+								>
+									<div class="image-panel">
+										<img
+											src="/assets/Web/3-Vacations/Vacation (11).webp"
+											class="slide-image"
+											alt="My Dream Vacation 11"
+										/>
+									</div>
+									<div class="caption-container" style="vertical-align: middle">
+										<p
+											style="
+												font-size: 3rem;
+												text-indent: 1rem;
+												line-height: 1.9;
+												margin-top: 2rem;
+												padding: 0rem;
+												text-align: justify;
+											"
+										>
+											Read about Goshi ES's Dream Vacations!
+										</p>
+										<div class="numbertext">11 / 24</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 12 -->
+							<div class="mySlides1">
+								<div
+									class="slide-content"
+									style="grid-template-columns: 65% 35%"
+								>
+									<div class="image-panel">
+										<img
+											src="/assets/Web/3-Vacations/Vacation (12).webp"
+											class="slide-image"
+											alt="My Dream Vacation 12"
+										/>
+									</div>
+									<div class="caption-container" style="vertical-align: middle">
+										<p
+											style="
+												font-size: 3rem;
+												text-indent: 1rem;
+												line-height: 1.9;
+												margin-top: 2rem;
+												padding: 0rem;
+												text-align: justify;
+											"
+										>
+											Read about Goshi ES's Dream Vacations!
+										</p>
+										<div class="numbertext">12 / 24</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 13 -->
+							<div class="mySlides1">
+								<div
+									class="slide-content"
+									style="grid-template-columns: 65% 35%"
+								>
+									<div class="image-panel">
+										<img
+											src="/assets/Web/3-Vacations/Vacation (13).webp"
+											class="slide-image"
+											alt="My Dream Vacation 13"
+										/>
+									</div>
+									<div class="caption-container" style="vertical-align: middle">
+										<p
+											style="
+												font-size: 3rem;
+												text-indent: 1rem;
+												line-height: 1.9;
+												margin-top: 2rem;
+												padding: 0rem;
+												text-align: justify;
+											"
+										>
+											Read about Goshi ES's Dream Vacations!
+										</p>
+										<div class="numbertext">13 / 24</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 14 -->
+							<div class="mySlides1">
+								<div
+									class="slide-content"
+									style="grid-template-columns: 65% 35%"
+								>
+									<div class="image-panel">
+										<img
+											src="/assets/Web/3-Vacations/Vacation (14).webp"
+											class="slide-image"
+											alt="My Dream Vacation 14"
+										/>
+									</div>
+									<div class="caption-container" style="vertical-align: middle">
+										<p
+											style="
+												font-size: 3rem;
+												text-indent: 1rem;
+												line-height: 1.9;
+												margin-top: 2rem;
+												padding: 0rem;
+												text-align: justify;
+											"
+										>
+											Read about Goshi ES's Dream Vacations!
+										</p>
+										<div class="numbertext">14 / 24</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 15 -->
+							<div class="mySlides1">
+								<div
+									class="slide-content"
+									style="grid-template-columns: 65% 35%"
+								>
+									<div class="image-panel">
+										<img
+											src="/assets/Web/3-Vacations/Vacation (15).webp"
+											class="slide-image"
+											alt="My Dream Vacation 15"
+										/>
+									</div>
+									<div class="caption-container" style="vertical-align: middle">
+										<p
+											style="
+												font-size: 3rem;
+												text-indent: 1rem;
+												line-height: 1.9;
+												margin-top: 2rem;
+												padding: 0rem;
+												text-align: justify;
+											"
+										>
+											Read about Goshi ES's Dream Vacations!
+										</p>
+										<div class="numbertext">15 / 24</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 16 -->
+							<div class="mySlides1">
+								<div
+									class="slide-content"
+									style="grid-template-columns: 65% 35%"
+								>
+									<div class="image-panel">
+										<img
+											src="/assets/Web/3-Vacations/Vacation (16).webp"
+											class="slide-image"
+											alt="My Dream Vacation 16"
+										/>
+									</div>
+									<div class="caption-container" style="vertical-align: middle">
+										<p
+											style="
+												font-size: 3rem;
+												text-indent: 1rem;
+												line-height: 1.9;
+												margin-top: 2rem;
+												padding: 0rem;
+												text-align: justify;
+											"
+										>
+											Read about Goshi ES's Dream Vacations!
+										</p>
+										<div class="numbertext">16 / 24</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 17 -->
+							<div class="mySlides1">
+								<div
+									class="slide-content"
+									style="grid-template-columns: 65% 35%"
+								>
+									<div class="image-panel">
+										<img
+											src="/assets/Web/3-Vacations/Vacation (17).webp"
+											class="slide-image"
+											alt="My Dream Vacation 17"
+										/>
+									</div>
+									<div class="caption-container" style="vertical-align: middle">
+										<p
+											style="
+												font-size: 3rem;
+												text-indent: 1rem;
+												line-height: 1.9;
+												margin-top: 2rem;
+												padding: 0rem;
+												text-align: justify;
+											"
+										>
+											Read about Goshi ES's Dream Vacations!
+										</p>
+										<div class="numbertext">17 / 24</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 18 -->
+							<div class="mySlides1">
+								<div
+									class="slide-content"
+									style="grid-template-columns: 65% 35%"
+								>
+									<div class="image-panel">
+										<img
+											src="/assets/Web/3-Vacations/Vacation (18).webp"
+											class="slide-image"
+											alt="My Dream Vacation 18"
+										/>
+									</div>
+									<div class="caption-container" style="vertical-align: middle">
+										<p
+											style="
+												font-size: 3rem;
+												text-indent: 1rem;
+												line-height: 1.9;
+												margin-top: 2rem;
+												padding: 0rem;
+												text-align: justify;
+											"
+										>
+											Read about Goshi ES's Dream Vacations!
+										</p>
+										<div class="numbertext">18 / 24</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 19 -->
+							<div class="mySlides1">
+								<div
+									class="slide-content"
+									style="grid-template-columns: 65% 35%"
+								>
+									<div class="image-panel">
+										<img
+											src="/assets/Web/3-Vacations/Vacation (19).webp"
+											class="slide-image"
+											alt="My Dream Vacation 19"
+										/>
+									</div>
+									<div class="caption-container" style="vertical-align: middle">
+										<p
+											style="
+												font-size: 3rem;
+												text-indent: 1rem;
+												line-height: 1.9;
+												margin-top: 2rem;
+												padding: 0rem;
+												text-align: justify;
+											"
+										>
+											Read about Goshi ES's Dream Vacations!
+										</p>
+										<div class="numbertext">19 / 24</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 20 -->
+							<div class="mySlides1">
+								<div
+									class="slide-content"
+									style="grid-template-columns: 65% 35%"
+								>
+									<div class="image-panel">
+										<img
+											src="/assets/Web/3-Vacations/Vacation (20).webp"
+											class="slide-image"
+											alt="My Dream Vacation 20"
+										/>
+									</div>
+									<div class="caption-container" style="vertical-align: middle">
+										<p
+											style="
+												font-size: 3rem;
+												text-indent: 1rem;
+												line-height: 1.9;
+												margin-top: 2rem;
+												padding: 0rem;
+												text-align: justify;
+											"
+										>
+											Read about Goshi ES's Dream Vacations!
+										</p>
+										<div class="numbertext">20 / 24</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 21 -->
+							<div class="mySlides1">
+								<div
+									class="slide-content"
+									style="grid-template-columns: 65% 35%"
+								>
+									<div class="image-panel">
+										<img
+											src="/assets/Web/3-Vacations/Vacation (21).webp"
+											class="slide-image"
+											alt="My Dream Vacation 21"
+										/>
+									</div>
+									<div class="caption-container" style="vertical-align: middle">
+										<p
+											style="
+												font-size: 3rem;
+												text-indent: 1rem;
+												line-height: 1.9;
+												margin-top: 2rem;
+												padding: 0rem;
+												text-align: justify;
+											"
+										>
+											Read about Goshi ES's Dream Vacations!
+										</p>
+										<div class="numbertext">21 / 24</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 22 -->
+							<div class="mySlides1">
+								<div
+									class="slide-content"
+									style="grid-template-columns: 65% 35%"
+								>
+									<div class="image-panel">
+										<img
+											src="/assets/Web/3-Vacations/Vacation (22).webp"
+											class="slide-image"
+											alt="My Dream Vacation 22"
+										/>
+									</div>
+									<div class="caption-container" style="vertical-align: middle">
+										<p
+											style="
+												font-size: 3rem;
+												text-indent: 1rem;
+												line-height: 1.9;
+												margin-top: 2rem;
+												padding: 0rem;
+												text-align: justify;
+											"
+										>
+											Read about Goshi ES's Dream Vacations!
+										</p>
+										<div class="numbertext">22 / 24</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 23 -->
+							<div class="mySlides1">
+								<div
+									class="slide-content"
+									style="grid-template-columns: 65% 35%"
+								>
+									<div class="image-panel">
+										<img
+											src="/assets/Web/3-Vacations/Vacation (23).webp"
+											class="slide-image"
+											alt="My Dream Vacation 23"
+										/>
+									</div>
+									<div class="caption-container" style="vertical-align: middle">
+										<p
+											style="
+												font-size: 3rem;
+												text-indent: 1rem;
+												line-height: 1.9;
+												margin-top: 2rem;
+												padding: 0rem;
+												text-align: justify;
+											"
+										>
+											Read about Goshi ES's Dream Vacations!
+										</p>
+										<div class="numbertext">23 / 24</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 24 -->
+							<div class="mySlides1">
+								<div
+									class="slide-content"
+									style="grid-template-columns: 65% 35%"
+								>
+									<div class="image-panel">
+										<img
+											src="/assets/Web/3-Vacations/Vacation (24).webp"
+											class="slide-image"
+											alt="My Dream Vacation 24"
+										/>
+									</div>
+									<div class="caption-container" style="vertical-align: middle">
+										<p
+											style="
+												font-size: 3rem;
+												text-indent: 1rem;
+												line-height: 1.9;
+												margin-top: 2rem;
+												padding: 0rem;
+												text-align: justify;
+											"
+										>
+											Read about Goshi ES's Dream Vacations!
+										</p>
+										<div class="numbertext">24 / 24</div>
 									</div>
 								</div>
 							</div>
@@ -473,627 +908,171 @@
 						<!-- Thumbnails -- Change for SlideShow1 or 2 -->
 						<div class="thumbnail-container">
 							<img
-								src="/assets/Web/3 - Bali/E1.jpg"
-								alt="George in Bali"
+								src="/assets/Web/3-Vacations/Vacation (1).webp"
+								alt="My Dream Vacation 1"
 								class="thumbnail1 thumbnail"
 								onclick="currentSlide(1, 1)"
 							/>
 
 							<img
-								src="/assets/Web/3 - Bali/E2.jpg"
-								alt="Bali Landscape"
+								src="/assets/Web/3-Vacations/Vacation (2).webp"
+								alt="My Dream Vacation 2"
 								class="thumbnail1 thumbnail"
 								onclick="currentSlide(1, 2)"
 							/>
 
 							<img
-								src="/assets/Web/3 - Bali/E3.jpg"
-								alt="Bali Hotel Pool"
+								src="/assets/Web/3-Vacations/Vacation (3).webp"
+								alt="My Dream Vacation 3"
 								class="thumbnail1 thumbnail"
 								onclick="currentSlide(1, 3)"
 							/>
 
 							<img
-								src="/assets/Web/3 - Bali/E4.jpg"
-								alt="Mangosteen"
+								src="/assets/Web/3-Vacations/Vacation (4).webp"
+								alt="My Dream Vacation 4"
 								class="thumbnail1 thumbnail"
 								onclick="currentSlide(1, 4)"
 							/>
 
 							<img
-								src="/assets/Web/3 - Bali/E5.jpg"
-								alt="Balinese Food"
+								src="/assets/Web/3-Vacations/Vacation (5).webp"
+								alt="My Dream Vacation 5"
 								class="thumbnail1 thumbnail"
 								onclick="currentSlide(1, 5)"
 							/>
 
 							<img
-								src="/assets/Web/3 - Bali/E6.jpg"
-								alt="Trash on the Beach"
+								src="/assets/Web/3-Vacations/Vacation (6).webp"
+								alt="My Dream Vacation 6"
 								class="thumbnail1 thumbnail"
 								onclick="currentSlide(1, 6)"
 							/>
-						</div>
-					</div>
-				</div>
-			</div>
 
-			<div class="items hidden-text" id="text1-2">
-				<!-- Modal content -->
-				<div class="modal-content-slideshow">
-					<div class="modal-header">
-						<span
-							class="close clickable"
-							onClick="ResetPlayAndShowWithNav('audio1-2', 'text1-2', 'play1-2','prev-portrait', 'next-portrait')"
-							>&times;</span
-						>
-					</div>
-
-					<div class="modal-body" style="display: flex">
-						<!-- Add the image slideshow here -->
-						<div id="slideshow-container2" class="slideshow-container">
-							<!-- Slides -- Change for SlideShow1 or 2 -->
-							<div class="mySlides2">
-								<div class="slide-content">
-									<div class="image-panel">
-										<img
-											src="/assets/Web/3 - Bali/M1.jpg"
-											class="slide-image"
-											alt="Bali Beaches"
-										/>
-									</div>
-									<div class="caption-container" style="vertical-align: middle">
-										<br /><br />
-										<p
-											style="
-												font-size: 2rem;
-												line-height: 1.8;
-												text-align: center;
-												vertical-align: middle;
-											"
-										>
-											Before you read, please look at these words and phrases:
-											<br />
-										</p>
-										<ol
-											style="
-												font-size: 1.3rem;
-												line-height: 1.8;
-												text-align: left;
-												padding-left: 5%;
-												columns: 3;
-												column-gap: 2.5rem;
-											"
-										>
-											<li>summer vacation</li>
-											<li>Bali</li>
-											<li>Indonesia</li>
-											<li>warm, beautiful beaches</li>
-											<li>surfing</li>
-											<li>swimming</li>
-											<li>local culture</li>
-											<li>good, inexpensive food</li>
-											<li>popular destination</li>
-											<li>too popular</li>
-											<li>trash</li>
-											<li>drinking water</li>
-											<li>not enough</li>
-											<li>overtourism</li>
-										</ol>
-										<p
-											style="
-												font-size: 2rem;
-												line-height: 1.8;
-												text-align: center;
-												vertical-align: middle;
-											"
-										>
-											What do they mean? And after you read, can you make a
-											short summary of the article using these words and
-											phrases?
-										</p>
-										<div class="numbertext">1 / 5</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="mySlides2">
-								<div class="slide-content">
-									<div class="image-panel">
-										<img
-											src="/assets/Web/3 - Bali/M2.jpg"
-											class="slide-image"
-											alt="Bali Beaches"
-										/>
-									</div>
-									<div class="caption-container">
-										<audio
-											controls
-											style="
-												width: 400px;
-												height: 40px;
-												border-radius: 8px;
-												padding: 5px;
-												position: relative;
-												left: 0px;
-											"
-										>
-											<source
-												src="assets/audio/audio3-2b.mp3"
-												type="audio/mpeg"
-											/>
-											Your browser does not support the audio element.</audio
-										><br /><br />
-										<p
-											style="
-												font-size: 2rem;
-												text-indent: 1rem;
-												line-height: 1.9;
-												margin-top: 0.5rem;
-												padding: 0rem;
-												text-align: justify;
-											"
-										>
-											It’s almost summertime, and that means it’s time to think
-											about summer vacation! One of my favorite vacations was in
-											Bali. It’s a beautiful island in Indonesia.
-										</p>
-
-										<div class="numbertext">2 / 5</div>
-									</div>
-								</div>
-							</div>
-							<div class="mySlides2">
-								<div class="slide-content">
-									<div class="image-panel">
-										<img
-											src="/assets/Web/3 - Bali/M3.jpg"
-											class="slide-image"
-											alt="Bali Beaches"
-										/>
-									</div>
-									<div class="caption-container">
-										<audio
-											controls
-											style="
-												width: 400px;
-												height: 40px;
-												border-radius: 8px;
-												padding: 5px;
-												position: relative;
-												left: 0px;
-											"
-										>
-											<source
-												src="assets/audio/audio3-2c.mp3"
-												type="audio/mpeg"
-											/>
-											Your browser does not support the audio element.</audio
-										><br /><br />
-										<p
-											style="
-												font-size: 2rem;
-												text-indent: 1rem;
-												line-height: 1.9;
-												margin-top: 0.5rem;
-												padding: 0rem;
-												text-align: justify;
-											"
-										>
-											Bali has warm, beautiful beaches. It’s great for surfing,
-											swimming, and relaxing. There is fantastic local culture
-											and good, inexpensive food. It’s one of the most popular
-											destinations in the world.
-										</p>
-
-										<div class="numbertext">3 / 5</div>
-									</div>
-								</div>
-							</div>
-							<div class="mySlides2">
-								<div class="slide-content">
-									<div class="image-panel">
-										<img
-											src="/assets/Web/3 - Bali/M4.jpg"
-											class="slide-image"
-											alt="Bali Beaches"
-										/>
-									</div>
-									<div class="caption-container">
-										<audio
-											controls
-											style="
-												width: 400px;
-												height: 40px;
-												border-radius: 8px;
-												padding: 5px;
-												position: relative;
-												left: 0px;
-											"
-										>
-											<source
-												src="assets/audio/audio3-2d.mp3"
-												type="audio/mpeg"
-											/>
-											Your browser does not support the audio element.</audio
-										><br /><br />
-										<p
-											style="
-												font-size: 2rem;
-												text-indent: 1rem;
-												line-height: 1.9;
-												margin-top: 0.5rem;
-												padding: 0rem;
-												text-align: justify;
-											"
-										>
-											People love to visit Bali, but now it’s a little too
-											popular. There are too many tourists on the roads. People
-											leave trash on the beaches. Beautiful pools use everyone’s
-											shared clean drinking water, and there isn’t enough for
-											everyone.
-										</p>
-
-										<div class="numbertext">4 / 5</div>
-									</div>
-								</div>
-							</div>
-							<div class="mySlides2">
-								<div class="slide-content">
-									<div class="image-panel">
-										<img
-											src="/assets/Web/3 - Bali/M5.jpg"
-											class="slide-image"
-											alt="Bali Beaches"
-										/>
-									</div>
-									<div class="caption-container">
-										<audio
-											controls
-											style="
-												width: 400px;
-												height: 40px;
-												border-radius: 8px;
-												padding: 5px;
-												position: relative;
-												left: 0px;
-											"
-										>
-											<source
-												src="assets/audio/audio3-2e.mp3"
-												type="audio/mpeg"
-											/>
-											Your browser does not support the audio element.</audio
-										><br /><br />
-										<p
-											style="
-												font-size: 2rem;
-												text-indent: 1rem;
-												line-height: 1.9;
-												margin-top: 0.5rem;
-												padding: 0rem;
-												text-align: justify;
-											"
-										>
-											Bali needs tourists and tourism. But overtourism is bad,
-											too. It’s the same for places like Kyoto in Japan. What do
-											you think we can do about it?
-										</p>
-										<div class="numbertext">5 / 5</div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Navigation buttons -- Change for SlideShow1 or 2 -->
-							<a class="prev" onclick="plusSlides(2, -1)">&#10094;</a>
-							<a class="next" onclick="plusSlides(2, 1)">&#10095;</a>
-
-							<br />
-						</div>
-					</div>
-
-					<!-- Modal footer -->
-					<div class="modal-footer">
-						<!-- Thumbnails -- Change for SlideShow1 or 2 -->
-						<div class="thumbnail-container">
 							<img
-								src="/assets/Web/3 - Bali/M1.jpg"
-								alt="Bali Beaches"
-								class="thumbnail2 thumbnail"
-								onclick="currentSlide(2, 1)"
+								src="/assets/Web/3-Vacations/Vacation (7).webp"
+								alt="My Dream Vacation 7"
+								class="thumbnail1 thumbnail"
+								onclick="currentSlide(1, 7)"
 							/>
-							<img
-								src="/assets/Web/3 - Bali/M2.jpg"
-								alt="Bali Beaches"
-								class="thumbnail2 thumbnail"
-								onclick="currentSlide(2, 2)"
-							/>
-							<img
-								src="/assets/Web/3 - Bali/M3.jpg"
-								alt="Bali Beaches"
-								class="thumbnail2 thumbnail"
-								onclick="currentSlide(2, 3)"
-							/>
-							<img
-								src="/assets/Web/3 - Bali/M4.jpg"
-								alt="Bali Beaches"
-								class="thumbnail2 thumbnail"
-								onclick="currentSlide(2, 4)"
-							/>
-							<img
-								src="/assets/Web/3 - Bali/M5.jpg"
-								alt="Bali Beaches"
-								class="thumbnail2 thumbnail"
-								onclick="currentSlide(2, 5)"
-							/>
-						</div>
-					</div>
-				</div>
-			</div>
 
-			<div class="items hidden-text" id="text1-3">
-				<!-- Modal content -->
-				<div class="modal-content-slideshow">
-					<div class="modal-header">
-						<span
-							class="close clickable"
-							onClick="ResetPlayAndShowWithNav('audio1-3', 'text1-3', 'play1-3','prev-portrait', 'next-portrait')"
-							>&times;</span
-						>
-					</div>
-
-					<div class="modal-body" style="display: flex">
-						<!-- Add the image slideshow here -->
-						<div id="slideshow-container3" class="slideshow-container">
-							<div class="mySlides3">
-								<div class="slide-content">
-									<div class="image-panel">
-										<img
-											src="/assets/Web/3 - Bali/O1.jpg"
-											class="slide-image"
-											alt="Bali Beaches"
-										/>
-									</div>
-									<div class="caption-container" style="vertical-align: middle">
-										<br /><br />
-										<p
-											style="
-												font-size: 2rem;
-												line-height: 1.8;
-												text-align: center;
-												vertical-align: middle;
-											"
-										>
-											Here are some extra pictures from Bali.
-										</p>
-										<div class="numbertext">1 / 7</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="mySlides3">
-								<div class="slide-content">
-									<div class="image-panel">
-										<img
-											src="/assets/Web/3 - Bali/O2.jpg"
-											class="slide-image"
-											alt="Bali Beaches"
-										/>
-									</div>
-									<div class="caption-container">
-										<br /><br />
-										<p
-											style="
-												font-size: 2rem;
-												line-height: 1.8;
-												text-align: center;
-												vertical-align: middle;
-											"
-										>
-											This is a picture from a hotel. In some hotels, you can
-											stay in little private houses called bungalows.
-										</p>
-
-										<div class="numbertext">2 / 7</div>
-									</div>
-								</div>
-							</div>
-							<div class="mySlides3">
-								<div class="slide-content">
-									<div class="image-panel">
-										<img
-											src="/assets/Web/3 - Bali/O3.jpg"
-											class="slide-image"
-											alt="Bali Beaches"
-										/>
-									</div>
-									<div class="caption-container">
-										<br /><br />
-										<p
-											style="
-												font-size: 2rem;
-												text-indent: 1rem;
-												line-height: 1.9;
-												margin-top: 0.5rem;
-												padding: 0rem;
-												text-align: justify;
-											"
-										>
-											You can see a lot of nice things from these bungalows.
-										</p>
-
-										<div class="numbertext">3 / 7</div>
-									</div>
-								</div>
-							</div>
-							<div class="mySlides3">
-								<div class="slide-content">
-									<div class="image-panel">
-										<img
-											src="/assets/Web/3 - Bali/O4.jpg"
-											class="slide-image"
-											alt="Bali Beaches"
-										/>
-									</div>
-									<div class="caption-container">
-										<br /><br />
-										<p
-											style="
-												font-size: 2rem;
-												text-indent: 1rem;
-												line-height: 1.9;
-												margin-top: 0.5rem;
-												padding: 0rem;
-												text-align: justify;
-											"
-										>
-											Bali is really nice, but there are a lot of sacred places.
-											You have to wear special clothes, such as this sarong,
-											when you go to these places.
-										</p>
-
-										<div class="numbertext">4 / 7</div>
-									</div>
-								</div>
-							</div>
-							<div class="mySlides3">
-								<div class="slide-content">
-									<div class="image-panel">
-										<img
-											src="/assets/Web/3 - Bali/O5.jpg"
-											class="slide-image"
-											alt="Bali Beaches"
-										/>
-									</div>
-									<div class="caption-container">
-										<br /><br />
-										<p
-											style="
-												font-size: 2rem;
-												text-indent: 1rem;
-												line-height: 1.9;
-												margin-top: 0.5rem;
-												padding: 0rem;
-												text-align: justify;
-											"
-										>
-											Nick also shared some pictures. He didn't go to Bali, but
-											he went to his hometown in the U.K.
-										</p>
-										<div class="numbertext">5 / 7</div>
-									</div>
-								</div>
-							</div>
-							<div class="mySlides3">
-								<div class="slide-content">
-									<div class="image-panel">
-										<img
-											src="/assets/Web/3 - Bali/O6.jpg"
-											class="slide-image"
-											alt="Bali Beaches"
-										/>
-									</div>
-									<div class="caption-container">
-										<br /><br />
-										<p
-											style="
-												font-size: 2rem;
-												text-indent: 1rem;
-												line-height: 1.9;
-												margin-top: 0.5rem;
-												padding: 0rem;
-												text-align: justify;
-											"
-										>
-											This is the famous British Lawnmower Museum. People travel
-											from all over the world to see it.
-										</p>
-										<div class="numbertext">6 / 7</div>
-									</div>
-								</div>
-							</div>
-							<div class="mySlides3">
-								<div class="slide-content">
-									<div class="image-panel">
-										<img
-											src="/assets/Web/3 - Bali/O7.jpg"
-											class="slide-image"
-											alt="Bali Beaches"
-										/>
-									</div>
-									<div class="caption-container">
-										<br /><br />
-										<p
-											style="
-												font-size: 2rem;
-												text-indent: 1rem;
-												line-height: 1.9;
-												margin-top: 0.5rem;
-												padding: 0rem;
-												text-align: justify;
-											"
-										>
-											This is a castle in North Wales in the U.K. There are many
-											castles in Wales, and some are more than 700 years old.
-										</p>
-										<div class="numbertext">7 / 7</div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Navigation buttons -- Change for SlideShow1 or 2 -->
-							<a class="prev" onclick="plusSlides(3, -1)">&#10094;</a>
-							<a class="next" onclick="plusSlides(3, 1)">&#10095;</a>
-
-							<br />
-						</div>
-					</div>
-
-					<!-- Modal footer -->
-					<div class="modal-footer">
-						<!-- Thumbnails -- Change for SlideShow1 or 2 -->
-						<div class="thumbnail-container">
 							<img
-								src="/assets/Web/3 - Bali/O1.jpg"
-								alt="Bali Beaches"
-								class="thumbnail3 thumbnail"
-								onclick="currentSlide(3, 1)"
+								src="/assets/Web/3-Vacations/Vacation (8).webp"
+								alt="My Dream Vacation 8"
+								class="thumbnail1 thumbnail"
+								onclick="currentSlide(1, 8)"
 							/>
+
 							<img
-								src="/assets/Web/3 - Bali/O2.jpg"
-								alt="Bali Beaches"
-								class="thumbnail3 thumbnail"
-								onclick="currentSlide(3, 2)"
+								src="/assets/Web/3-Vacations/Vacation (9).webp"
+								alt="My Dream Vacation 9"
+								class="thumbnail1 thumbnail"
+								onclick="currentSlide(1, 9)"
 							/>
+
 							<img
-								src="/assets/Web/3 - Bali/O3.jpg"
-								alt="Bali Beaches"
-								class="thumbnail3 thumbnail"
-								onclick="currentSlide(3, 3)"
+								src="/assets/Web/3-Vacations/Vacation (10).webp"
+								alt="My Dream Vacation 10"
+								class="thumbnail1 thumbnail"
+								onclick="currentSlide(1, 10)"
 							/>
+
 							<img
-								src="/assets/Web/3 - Bali/O4.jpg"
-								alt="Bali Beaches"
-								class="thumbnail3 thumbnail"
-								onclick="currentSlide(3, 4)"
+								src="/assets/Web/3-Vacations/Vacation (11).webp"
+								alt="My Dream Vacation 11"
+								class="thumbnail1 thumbnail"
+								onclick="currentSlide(1, 11)"
 							/>
+
 							<img
-								src="/assets/Web/3 - Bali/O5.jpg"
-								alt="Bali Beaches"
-								class="thumbnail3 thumbnail"
-								onclick="currentSlide(3, 5)"
+								src="/assets/Web/3-Vacations/Vacation (12).webp"
+								alt="My Dream Vacation 12"
+								class="thumbnail1 thumbnail"
+								onclick="currentSlide(1, 12)"
 							/>
+
 							<img
-								src="/assets/Web/3 - Bali/O6.jpg"
-								alt="Bali Beaches"
-								class="thumbnail3 thumbnail"
-								onclick="currentSlide(3, 6)"
+								src="/assets/Web/3-Vacations/Vacation (13).webp"
+								alt="My Dream Vacation 13"
+								class="thumbnail1 thumbnail"
+								onclick="currentSlide(1, 13)"
 							/>
+
 							<img
-								src="/assets/Web/3 - Bali/O7.jpg"
-								alt="Bali Beaches"
-								class="thumbnail3 thumbnail"
-								onclick="currentSlide(3, 7)"
+								src="/assets/Web/3-Vacations/Vacation (14).webp"
+								alt="My Dream Vacation 14"
+								class="thumbnail1 thumbnail"
+								onclick="currentSlide(1, 14)"
+							/>
+
+							<img
+								src="/assets/Web/3-Vacations/Vacation (15).webp"
+								alt="My Dream Vacation 15"
+								class="thumbnail1 thumbnail"
+								onclick="currentSlide(1, 15)"
+							/>
+
+							<img
+								src="/assets/Web/3-Vacations/Vacation (16).webp"
+								alt="My Dream Vacation 16"
+								class="thumbnail1 thumbnail"
+								onclick="currentSlide(1, 16)"
+							/>
+
+							<img
+								src="/assets/Web/3-Vacations/Vacation (17).webp"
+								alt="My Dream Vacation 17"
+								class="thumbnail1 thumbnail"
+								onclick="currentSlide(1, 17)"
+							/>
+
+							<img
+								src="/assets/Web/3-Vacations/Vacation (18).webp"
+								alt="My Dream Vacation 18"
+								class="thumbnail1 thumbnail"
+								onclick="currentSlide(1, 18)"
+							/>
+
+							<img
+								src="/assets/Web/3-Vacations/Vacation (19).webp"
+								alt="My Dream Vacation 19"
+								class="thumbnail1 thumbnail"
+								onclick="currentSlide(1, 19)"
+							/>
+
+							<img
+								src="/assets/Web/3-Vacations/Vacation (20).webp"
+								alt="My Dream Vacation 20"
+								class="thumbnail1 thumbnail"
+								onclick="currentSlide(1, 20)"
+							/>
+
+							<img
+								src="/assets/Web/3-Vacations/Vacation (21).webp"
+								alt="My Dream Vacation 21"
+								class="thumbnail1 thumbnail"
+								onclick="currentSlide(1, 21)"
+							/>
+
+							<img
+								src="/assets/Web/3-Vacations/Vacation (22).webp"
+								alt="My Dream Vacation 22"
+								class="thumbnail1 thumbnail"
+								onclick="currentSlide(1, 22)"
+							/>
+
+							<img
+								src="/assets/Web/3-Vacations/Vacation (23).webp"
+								alt="My Dream Vacation 23"
+								class="thumbnail1 thumbnail"
+								onclick="currentSlide(1, 23)"
+							/>
+
+							<img
+								src="/assets/Web/3-Vacations/Vacation (24).webp"
+								alt="My Dream Vacation 24"
+								class="thumbnail1 thumbnail"
+								onclick="currentSlide(1, 24)"
 							/>
 						</div>
 					</div>
